@@ -16,6 +16,8 @@
 
   outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
   let
+    homeStateVersion = "24.05";
+ 
     nixpkgsConfig = {
       config = { allowUnfree = true; };
     };
