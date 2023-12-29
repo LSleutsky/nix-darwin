@@ -2,7 +2,7 @@
   description = "Nix Darwin Configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs-23.11-darwin";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     darwin.url = "github:LnL7/nix-darwin/master";
@@ -15,29 +15,36 @@
   };
 
   outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
-    let
-      inherit (darwin.lib) darwinSystem;
-      inherit (inputs.nixpkgs-unstable.lib) attrValues makeOverridable optionalAttrs singleton;
+  let
+    nixpkgsConfig = {
+      config = { allowUnfree = true; };
+    };
+  in
+  {
+    # Configurations ------------------------------------------------------------------------
 
-      nixpkgsConfig = {
-        config = { allowUnfree = true; };
+    darwinConfigurations = rec {
+      hyprnova = darwin.lib.darwinSystem {
+        system = "x86_64-darwin";
+        modules = [
+          ./configuration.nix
+          home-manager.darwinModules.home-manager
+          {
+            nixpkgs = nixpkgsConfig;
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.lushsleutsky = import ./home.nix;
+          }
+        ];
       };
-    in
-    {
-      darwinConfigurations = rec {
-        supernova = darwinSystem {
-          system = "x86_64-darwin";
-          modules = attrValues self.darwinModules ++ [
-            ./configuration.nix
-            home-manager.darwinModules.home-manager
-            {
-              nixpkgs = nixpkgsConfig;
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.lush = import ./home.nix;
-            }
-          ];
-        };
+    };
+
+    # Overlays ------------------------------------------------------------------------------
+
+    overlays = {
+      comma = final: prev: {
+        comma = import inputs.comma { inherit (prev) pkgs; };
       };
-    }
+    };
+  };
 }
