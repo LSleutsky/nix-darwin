@@ -8,10 +8,7 @@
     settings = {
       auto-optimise-store = true;
       trusted-users = ["@admin"];
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
+      experimental-features = ["nix-command" "flakes"];
     };
   };
 
@@ -19,10 +16,14 @@
     nix-daemon.enable = true;
   };
 
-  environment.shells = with pkgs; [
-    bashInteractive
-    zsh
-  ];
+  environment = {
+    shells = with pkgs; [bashInteractive zsh];
+    variables = {
+      EDITOR = "nvim";
+      SUDO_EDITOR = "nvim";
+      PAGER = "less";
+    };
+  };
 
   programs = {
     man.enable = true;

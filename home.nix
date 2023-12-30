@@ -2,8 +2,10 @@
 
 {
   imports = [
+    ./home/fzf.nix
     ./home/eza.nix
     ./home/starship.nix
+    ./home/zoxide.nix
     ./home/zsh.nix
   ];
 

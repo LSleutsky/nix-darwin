@@ -11,6 +11,8 @@
       cfg = "$HOME/.config";
       dl = "$HOME/Downloads";
       docs = "$HOME/Documents";
+      nx = "$HOME/.config/nix-darwin";
+      nxh = "$HOME/.config/nix-darwin/home";
       pics = "$HOME/Pictuares";
       repos = "$HOME/repos";
       vids = "$HOME/Videos";
@@ -71,6 +73,7 @@
       history = "history -i";
       man = "batman";
       mkdir = "mkdir -p";
+      rebuild = "./result/sw/bin/darwin-rebuild switch --flake .";
       n = "nvim";
       sn = "sudo -Es nvim";
       tree = "tree -ad --gitignore -C -L 2";
