@@ -17,6 +17,7 @@
   };
 
   environment = {
+    darwinConfig = "$HOME/.config/nix-darwin/configuration.nix";
     shells = with pkgs; [bashInteractive zsh];
     variables = {
       EDITOR = "nvim";

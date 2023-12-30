@@ -73,6 +73,7 @@
       history = "history -i";
       man = "batman";
       mkdir = "mkdir -p";
+      nf = "nvim $HOME/.config/nix-darwin/configuration.nix";
       rebuild = "./result/sw/bin/darwin-rebuild switch --flake .";
       n = "nvim";
       sn = "sudo -Es nvim";
