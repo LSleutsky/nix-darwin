@@ -27,7 +27,12 @@
   programs = {
     man.enable = true;
     nix-index.enable = true;
-    zsh.enable = true;
+    zsh = {
+      enable = true;
+      enableBashCompletion = true;
+      enableCompletion = true;
+      enableSyntaxHighlighting = true;
+    };
   };
 
   users.users.lushsleutsky = {
