@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
+	imports = [
+		./modules/nixvim.nix
+	];
+
   security.pam.enableSudoTouchIdAuth = true;
   time.timeZone = "America/New_York";
 
@@ -58,12 +62,6 @@
   homebrew = {
     enable = true;
     global.autoUpdate = true;
-    brews = [
-      {
-        name = "neovim";
-        args = ["HEAD"];
-      }
-    ];
     taps = [
       "homebrew/cask"
       "homebrew/cask/fonts"

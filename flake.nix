@@ -20,7 +20,7 @@
 
   let
     homeStateVersion = "24.05";
- 
+
     nixpkgsConfig = {
       config = {
 				allowUnfree = true;
@@ -43,6 +43,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.lushsleutsky = import ./home.nix;
           }
+					nixvim.nixDarwinModules.nixvim
         ];
       };
     };
