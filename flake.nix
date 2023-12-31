@@ -11,9 +11,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 		nixvim.url = "github:nix-community/nixvim";
-
-    comma = { url = "github:Shopify/comma"; flake = false; };
   };
 
   outputs = { self, darwin, nixpkgs, home-manager, nixvim, ... }@inputs:
@@ -26,6 +25,7 @@
 				allowUnfree = true;
 				allowUnsupportedSystem = true;
 			};
+      overlays = [inputs.neovim-nightly-overlay.overlay];
     };
   in
   {
@@ -45,14 +45,6 @@
 					nixvim.nixDarwinModules.nixvim
           ./hosts/darwin
         ];
-      };
-    };
-
-    # Overlays ------------------------------------------------------------------------------
-
-    overlays = {
-      comma = final: prev: {
-        comma = import inputs.comma { inherit (prev) pkgs; };
       };
     };
   };

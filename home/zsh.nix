@@ -74,6 +74,7 @@
       j = "__zoxide_z";
       man = "batman";
       mkdir = "mkdir -p";
+      nd = "nvim $HOME/.config/nix-darwin/hosts/darwin/default.nix";
       nf = "nvim $HOME/.config/nix-darwin/flake.nix";
       rebuild = "darwin-rebuild switch --flake .";
       n = "nvim";
