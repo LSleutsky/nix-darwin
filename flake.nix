@@ -11,10 +11,13 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
+		nixvim.url = "github:nix-community/nixvim";
+
     comma = { url = "github:Shopify/comma"; flake = false; };
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, darwin, nixpkgs, home-manager, nixvim, ... }@inputs:
+
   let
     homeStateVersion = "24.05";
  

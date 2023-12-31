@@ -54,4 +54,20 @@
       })
     ];
   };
+
+  homebrew = {
+    enable = true;
+    global.autoUpdate = true;
+    brews = [
+      {
+        name = "neovim";
+        args = ["HEAD"];
+      }
+    ];
+    taps = [
+      "homebrew/cask"
+      "homebrew/cask/fonts"
+      "homebrew/cask/versions"
+    ];
+  };
 }
