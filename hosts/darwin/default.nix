@@ -2,7 +2,7 @@
 
 {
 	imports = [
-		./modules/nixvim.nix
+		../../modules/nixvim.nix
 	];
 
   security.pam.enableSudoTouchIdAuth = true;

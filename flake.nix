@@ -35,7 +35,6 @@
       hyprnova = darwin.lib.darwinSystem {
         system = "x86_64-darwin";
         modules = [
-          ./configuration.nix
           home-manager.darwinModules.home-manager
           {
             nixpkgs = nixpkgsConfig;
@@ -44,6 +43,7 @@
             home-manager.users.lushsleutsky = import ./home.nix;
           }
 					nixvim.nixDarwinModules.nixvim
+          ./hosts/darwin
         ];
       };
     };
