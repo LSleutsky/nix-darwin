@@ -71,10 +71,11 @@
       gc = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       grep = "grep --color=auto";
       history = "history -i";
+      j = "__zoxide_z";
       man = "batman";
       mkdir = "mkdir -p";
-      nf = "nvim $HOME/.config/nix-darwin/configuration.nix";
-      rebuild = "./result/sw/bin/darwin-rebuild switch --flake .";
+      nf = "nvim $HOME/.config/nix-darwin/flake.nix";
+      rebuild = "darwin-rebuild switch --flake .";
       n = "nvim";
       sn = "sudo -Es nvim";
       tree = "tree -ad --gitignore -C -L 2";

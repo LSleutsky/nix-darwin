@@ -21,6 +21,8 @@
     shells = with pkgs; [bashInteractive zsh];
     variables = {
       EDITOR = "nvim";
+			NIXPKGS_ALLOW_BROKEN = "1";
+			NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM = "1";
       SUDO_EDITOR = "nvim";
       PAGER = "less";
     };

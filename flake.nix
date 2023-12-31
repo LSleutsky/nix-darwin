@@ -19,7 +19,10 @@
     homeStateVersion = "24.05";
  
     nixpkgsConfig = {
-      config = { allowUnfree = true; };
+      config = {
+				allowUnfree = true;
+				allowUnsupportedSystem = true;
+			};
     };
   in
   {
