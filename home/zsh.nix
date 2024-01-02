@@ -76,7 +76,7 @@
       mkdir = "mkdir -p";
       nd = "nvim $HOME/.config/nix-darwin/hosts/darwin/default.nix";
       nf = "nvim $HOME/.config/nix-darwin/flake.nix";
-      rebuild = "darwin-rebuild switch --flake .";
+      rebuild = "nix flake update && darwin-rebuild switch --flake .";
       n = "nvim";
       sn = "sudo -Es nvim";
       tree = "tree -ad --gitignore -C -L 2";

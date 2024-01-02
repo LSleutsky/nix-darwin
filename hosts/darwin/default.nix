@@ -9,6 +9,16 @@
   time.timeZone = "America/New_York";
 
   nix = {
+    gc = {
+      user = "root";
+      automatic = true;
+      interval = {
+        Weekday = 0;
+        Hour = 3;
+        Minute = 0;
+      };
+      options = "--delete-old";
+    };
     settings = {
       auto-optimise-store = true;
       trusted-users = ["@admin"];
