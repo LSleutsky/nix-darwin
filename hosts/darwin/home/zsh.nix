@@ -23,6 +23,7 @@
       ignoreAllDups = true;
       ignoreDups = true;
       ignoreSpace = true;
+      path = "$HOME/.zsh_history";
       share = true;
       size = 20000;
     };

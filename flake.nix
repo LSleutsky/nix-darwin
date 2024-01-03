@@ -40,7 +40,7 @@
             nixpkgs = nixpkgsConfig;
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.lushsleutsky = import ./home.nix;
+            home-manager.users.lushsleutsky = import ./hosts/darwin/home.nix;
           }
 					nixvim.nixDarwinModules.nixvim
           ./hosts/darwin
