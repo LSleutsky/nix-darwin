@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./dotfiles/nanorc.nix
+    ./dotfiles/vimrc.nix
     ./packages/fzf.nix
     ./packages/eza.nix
     ./packages/starship.nix
