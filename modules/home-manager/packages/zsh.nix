@@ -12,8 +12,11 @@
       dl = "$HOME/Downloads";
       docs = "$HOME/Documents";
       nx = "$HOME/.config/nix-darwin";
-      nxh = "$HOME/.config/nix-darwin/home";
-      pics = "$HOME/Pictuares";
+      nxh = "$HOME/.config/nix-darwin/hosts/darwin";
+      nxm = "$HOME/.config/nix-darwin/modules/home-manager";
+      nxp = "$HOME/.config/nix-darwin/modules/home-manager/packages";
+      nxv = "$HOME/.config/nix-darwin/modules/nixvim";
+      pics = "$HOME/Pictures";
       repos = "$HOME/repos";
       vids = "$HOME/Videos";
     };
@@ -77,6 +80,8 @@
       mkdir = "mkdir -p";
       nd = "nvim $HOME/.config/nix-darwin/hosts/darwin/default.nix";
       nf = "nvim $HOME/.config/nix-darwin/flake.nix";
+      nh = "nvim $HOME/.config/nix-darwin/modules/home-manager/default.nix";
+      nv = "nvim $HOME/.config/nix-darwin/modules/nixvim/default.nix";
       rebuild = "nix flake update && darwin-rebuild switch --flake .";
       n = "nvim";
       sn = "sudo -Es nvim";
