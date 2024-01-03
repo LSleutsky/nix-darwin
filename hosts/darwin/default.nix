@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-	imports = [
-		../../modules/nixvim.nix
-	];
-
   security.pam.enableSudoTouchIdAuth = true;
   time.timeZone = "America/New_York";
 
@@ -62,7 +58,6 @@
   fonts = {
     fontDir.enable = true;
     fonts = with pkgs; [
-      recursive
       (nerdfonts.override {
         fonts = ["JetBrainsMono" "RobotoMono" "ComicShannsMono"];
       })
