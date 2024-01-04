@@ -85,7 +85,7 @@
       rebuild = "nix flake update && darwin-rebuild switch --flake .";
       n = "nvim";
       sn = "sudo -Es nvim";
-      tree = "tree -ad --gitignore -C -L 2";
+      tree = "tree -ad -C";
       zk = "zk --working-dir=odins-eye";
     };
     initExtra = ''
