@@ -10,11 +10,12 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 		nixvim.url = "github:nix-community/nixvim";
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, nixvim, ... }@inputs:
+  outputs = { self, darwin, nixpkgs, home-manager, chaotic, nixvim, ... }@inputs:
 
   let
     homeStateVersion = "24.05";
@@ -44,6 +45,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.lushsleutsky = import ./modules/home-manager;
           }
+          chaotic.homeManagerModules.default
 					nixvim.nixDarwinModules.nixvim
           ./modules/nixvim
           ./hosts/darwin

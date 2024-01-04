@@ -3,7 +3,6 @@
 {
   programs.ripgrep = {
     enable = true;
-    package = pkgs.ripgrep-all;
     arguments = [
       "--hidden"
       "--smart-case"

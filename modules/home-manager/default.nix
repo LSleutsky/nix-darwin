@@ -36,6 +36,7 @@
     ngrok
     onefetch
 		pipes-rs
+    ripgrep-all
     scc
     spotify
     tlrc
