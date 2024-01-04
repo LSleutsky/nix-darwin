@@ -5,10 +5,16 @@
     ./dotfiles/ignore.nix
     ./dotfiles/nanorc.nix
     ./dotfiles/vimrc.nix
+    ./packages/bat.nix
+    ./packages/btop.nix
+    ./packages/command-not-found.nix
     ./packages/eza.nix
     ./packages/fzf.nix
     ./packages/git.nix
+    ./packages/ncmpcpp.nix
+    ./packages/ripgrep.nix
     ./packages/starship.nix
+    ./packages/watson.nix
     ./packages/zoxide.nix
     ./packages/zsh.nix
   ];
@@ -20,19 +26,21 @@
     fd
     figlet
 		fortune
+    glow
+    imagemagick
 		lolcat
     nano
     nanorc
 		neo-cowsay
     neofetch
-    nginx
+    ngrok
     onefetch
 		pipes-rs
-    ripgrep
-    ripgrep-all
     scc
+    spotify
     tlrc
     tree
+    yamllint
     zk
   ];
 
