@@ -15,11 +15,25 @@
 
   home.stateVersion = "24.05";
   home.packages = with pkgs; [
+    cmatrix
+    curl
+    fd
+    figlet
 		fortune
-    inxi
 		lolcat
+    nano
+    nanorc
 		neo-cowsay
+    neofetch
+    nginx
+    onefetch
 		pipes-rs
+    ripgrep
+    ripgrep-all
+    scc
+    tlrc
+    tree
+    zk
   ];
 
   xdg.enable = true;

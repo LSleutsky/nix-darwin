@@ -6,9 +6,6 @@
     caskArgs.no_quarantine = true;
     global.autoUpdate = true;
     global.brewfile = true;
-    brews = [
-      "tealdeer"
-    ];
     casks = [
       "1password"
       "1password-cli"
