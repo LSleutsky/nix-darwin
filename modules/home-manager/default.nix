@@ -15,6 +15,7 @@
     ./packages/ripgrep.nix
     ./packages/starship.nix
     ./packages/watson.nix
+    ./packages/yazi.nix
     ./packages/zoxide.nix
     ./packages/zsh.nix
   ];

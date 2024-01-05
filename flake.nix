@@ -13,6 +13,7 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 		nixvim.url = "github:nix-community/nixvim";
+    yazi.url = "github:sxyazi/yazi";
   };
 
   outputs = { self, darwin, nixpkgs, home-manager, chaotic, nixvim, ... }@inputs:
@@ -30,8 +31,6 @@
     };
   in
   {
-    # Configurations ------------------------------------------------------------------------
-
     darwinConfigurations = rec {
       hyprnova = darwin.lib.darwinSystem {
         system = "x86_64-darwin";
