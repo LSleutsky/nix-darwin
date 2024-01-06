@@ -4,6 +4,7 @@
   imports = [
     ./dotfiles/ignore.nix
     ./dotfiles/nanorc.nix
+    ./dotfiles/neofetch.nix
     ./dotfiles/vimrc.nix
     ./packages/bat.nix
     ./packages/btop.nix
