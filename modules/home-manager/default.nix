@@ -37,7 +37,9 @@
     ngrok
     onefetch
 		pipes-rs
-    ripgrep-all
+    (ripgrep-all.overrideAttrs (old: {
+      doInstallCheck = false;
+    }))
     scc
     spotify
     tlrc
