@@ -15,6 +15,7 @@
     ./packages/ncmpcpp.nix
     ./packages/ripgrep.nix
     ./packages/starship.nix
+    ./packages/thefuck.nix
     ./packages/watson.nix
     ./packages/yazi.nix
     ./packages/zoxide.nix
@@ -23,8 +24,10 @@
 
   home.stateVersion = "24.05";
   home.packages = with pkgs; [
+    _1password
     cmatrix
     curl
+    discord
     fd
     figlet
 		fortune

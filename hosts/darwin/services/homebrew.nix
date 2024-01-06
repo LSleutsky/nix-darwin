@@ -7,15 +7,14 @@
     global.autoUpdate = true;
     global.brewfile = true;
     brews = [
-      "nginx"
+      "tty-clock"
     ];
     casks = [
-      "1password"
-      "1password-cli"
+      "1password-nightly"
       "boom-3d"
-      "discord"
       "istat-menus"
       "iterm2-nightly"
+      "notunes"
       "smcfancontrol"
     ];
     taps = [

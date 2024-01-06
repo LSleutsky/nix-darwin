@@ -13,6 +13,7 @@
         info "​$(color 6)  " distro
         info "​$(color 2)  " kernel
         info "​$(color 3)   " de
+        info "​$(color 8)   " wm
         info "​$(color 5)  " term
         info "​$(color 7)  " shell
         info "​$(color 4)  " packages

@@ -46,8 +46,8 @@
       "........." = "cd ../../../../../../../../";
       ".........." = "cd ../../../../../../../../../";
       clock = "tty-clock -bcsC4 -f %a,\\ %d\\ %b\\ %Y";
+      dir = "tree -ad -C -I '.git' -I 'node_modules'";
       df = "df -h";
-      flake = "nix flake update";
       free = "free -mth";
       gaa = "git add --all";
       gac = "git add --all && git commit -m";
@@ -66,14 +66,14 @@
       gfp = "git fetch --all --prune && git pull --rebase origin $(git symbolic-ref --short HEAD)";
       ggf = "git push --force origin $(git symbolic-ref --short HEAD)";
       ggp = "git push origin $(git symbolic-ref --short HEAD)";
-      glo = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+      gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
       gpp = "git pull --rebase origin $(git symbolic-ref --short HEAD) && git push origin $(git symbolic-ref --short HEAD)";
       grb = "git rebase";
       grba = "git rebase --abort";
       grbc = "git rebase --continue";
       gsb = "git status -sb";
-      gc = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       grep = "grep --color=auto";
+      gc = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d";
       history = "history -i";
       j = "__zoxide_z";
       man = "batman";
@@ -85,8 +85,7 @@
       rebuild = "nix flake update && darwin-rebuild switch --flake .";
       n = "nvim";
       sn = "sudo -Es nvim";
-      tree = "tree -ad -C -I '.git'";
-      zk = "zk --working-dir=odins-eye";
+      tree = "tree -a -C -I '.git' -I 'node_modules'";
     };
     initExtra = ''
       setopt always_to_end
@@ -139,6 +138,7 @@
       bindkey '^w' zsh-backward-kill-word
 
       eval "$(op completion zsh)"; compdef _op op
+      eval $(thefuck --alias --enable-experimental-instant-mode)
     '';
     initExtraBeforeCompInit = ''
       autoload -Uz up-line-or-beginning-search
