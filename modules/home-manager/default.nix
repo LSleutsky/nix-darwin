@@ -33,6 +33,7 @@
 		fortune
     glow
     imagemagick
+    jq
 		lolcat
     nano
     nanorc
@@ -41,15 +42,16 @@
     ngrok
     onefetch
 		pipes-rs
-    (ripgrep-all.overrideAttrs (old: {
-      doInstallCheck = false;
-    }))
     scc
     spotify
     tlrc
     tree
     yamllint
     zk
+
+    (ripgrep-all.overrideAttrs (old: {
+      doInstallCheck = false;
+    }))
   ];
 
   xdg.enable = true;
