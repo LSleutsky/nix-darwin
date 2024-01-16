@@ -28,6 +28,7 @@
     cmatrix
     curl
     discord
+    duf
     fd
     figlet
 		fortune
