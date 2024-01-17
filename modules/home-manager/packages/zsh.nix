@@ -75,6 +75,7 @@
       grep = "grep --color=auto";
       gc = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d";
       history = "history -i";
+      ip = "ipconfig getifaddr en0";
       j = "__zoxide_z";
       man = "batman";
       mkdir = "mkdir -p";
