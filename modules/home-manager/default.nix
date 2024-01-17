@@ -7,7 +7,7 @@
     ./dotfiles/neofetch.nix
     ./dotfiles/vimrc.nix
     ./packages/bat.nix
-    ./packages/btop.nix
+    # ./packages/btop.nix
     ./packages/command-not-found.nix
     ./packages/eza.nix
     ./packages/fzf.nix
@@ -25,6 +25,8 @@
   home.stateVersion = "24.05";
   home.packages = with pkgs; [
     _1password
+    asciinema
+    asciiquarium
     cmatrix
     curl
     discord
