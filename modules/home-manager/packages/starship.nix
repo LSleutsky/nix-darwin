@@ -8,6 +8,7 @@
       format = "$directory$git_branch$git_status$docker_context$character";
       right_format = "$nodejs";
       add_newline = true;
+      command_timeout = 2500;
       character = {
         success_symbol = "[](#a6e3a1 bold)";
         error_symbol = "[](#f38ba8)";
