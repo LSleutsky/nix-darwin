@@ -10,11 +10,11 @@
         "yafas": "yafas"
       },
       "locked": {
-        "lastModified": 1706183550,
-        "narHash": "sha256-06BQrrPZDsnFL7WLUveDkKk1ZVxAnmc6mFNP4Vb84qY=",
+        "lastModified": 1706278412,
+        "narHash": "sha256-qdbKtbEHpnBgrdP6gCG97bHJv5rpVLwcwpI4eSJgm3k=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "5c1df57391b39bf0880e7b3b9209e4f37e19fcde",
+        "rev": "05858851fcf6b687534c4a15d735b87309687cbd",
         "type": "github"
       },
       "original": {
@@ -481,11 +481,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1706198703,
-        "narHash": "sha256-7INiYw039cf5202QxnIlOVXx+QMI8qsUGzbg5mnFSF4=",
+        "lastModified": 1706281253,
+        "narHash": "sha256-MH9HOZCjeCGP5ZPiqYlO3X/HO+qLC/TqlL6+lPxJiV4=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "7164a89f72c28305e9ee7833220913d27aca9bd4",
+        "rev": "d13755597173dacd2023f48ac7724498402f2521",
         "type": "github"
       },
       "original": {
@@ -649,11 +649,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1706258136,
-        "narHash": "sha256-1MtzlX66K8wULxXltQUBrlD0izNLdxFeORzv00xoeTk=",
+        "lastModified": 1706281189,
+        "narHash": "sha256-eulfpzBuw19/qJ1JjDw3q6KfOusoknOprni29+WGGw8=",
         "owner": "sxyazi",
         "repo": "yazi",
-        "rev": "c02d69590bda49babe0883ff78341d92e557f381",
+        "rev": "f31f78b06365892a240c2855d0c7d8ab50985fcb",
         "type": "github"
       },
       "original": {
