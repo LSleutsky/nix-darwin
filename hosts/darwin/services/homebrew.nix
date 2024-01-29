@@ -3,16 +3,25 @@
 {
   homebrew = {
     enable = true;
-    caskArgs.no_quarantine = true;
-    global.autoUpdate = true;
-    global.brewfile = true;
+		global = {
+			autoUpdate = false;
+			brewfile = true;
+		};
+		onActivation = {
+			autoUpdate = true;
+			cleanup = "zap";
+			upgrade = true;
+		};
     casks = [
-      "1password-nightly"
       "boom-3d"
       "istat-menus"
-      "iterm2-nightly"
+      "logi-options-plus"
       "notunes"
-      "smcfancontrol"
+      "slack"
     ];
+		masApps = {
+			"Amphetamine" = 937984704;
+			"myPoint Light S" = 518658487;
+		};
   };
 }

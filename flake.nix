@@ -3,24 +3,43 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-
-    darwin.url = "github:LnL7/nix-darwin/master";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
-
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
+		nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 		nixvim.url = "github:nix-community/nixvim";
     yazi.url = "github:sxyazi/yazi";
+
+		darwin = {
+			url = "github:LnL7/nix-darwin/master";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
+		home-manager = {
+			url = "github:nix-community/home-manager";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+		
+
+		homebrew-bundle = {
+			url = "github:homebrew/homebrew-bundle";
+			flake = false;
+		};
+
+		homebrew-core = {
+			url = "github:homebrew/homebrew-core";
+			flake = false;
+		};
+
+		homebrew-cask = {
+			url = "github:homebrew/homebrew-cask";
+			flake = false;
+		};
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, chaotic, nixvim, ... }@inputs:
+  outputs = { self, darwin, nixpkgs, home-manager, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, chaotic, nixvim, ... } @inputs:
 
   let
-    homeStateVersion = "24.05";
-
+		user = "lush";
     nixpkgsConfig = {
       config = {
 				allowUnfree = true;
@@ -32,17 +51,31 @@
   in
   {
     darwinConfigurations = rec {
-      hyprnova = darwin.lib.darwinSystem {
-        system = "x86_64-darwin";
+      odinforce = darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
         lib = nixpkgs.lib;
         modules = [
           home-manager.darwinModules.home-manager
+					nix-homebrew.darwinModules.nix-homebrew
+					{
+						nix-homebrew = {
+							enable = true;
+							user = "${user}";
+							taps = {
+								"homebrew/homebrew-bundle" = homebrew-bundle;
+								"homebrew/homebrew-core" = homebrew-core;
+								"homebrew/homebrew-cask" = homebrew-cask;
+							};
+							mutableTaps = false;
+							autoMigrate = true;
+						};
+					}
           {
             nixpkgs = nixpkgsConfig;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.lushsleutsky = import ./modules/home-manager;
+            home-manager.users.${user} = import ./modules/home-manager;
           }
           chaotic.homeManagerModules.default
 					nixvim.nixDarwinModules.nixvim

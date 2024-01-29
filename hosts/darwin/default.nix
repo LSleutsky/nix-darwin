@@ -51,9 +51,9 @@
     };
   };
 
-  users.users.lushsleutsky = {
+  users.users.lush = {
     description = "Lush Sleutsky";
-    home = "/Users/lushsleutsky";
+    home = "/Users/lush";
     shell = pkgs.zsh;
   };
 
@@ -76,10 +76,10 @@
   system.defaults = {
     CustomUserPreferences = {
       NSGlobalDomain.WebKitDeveloperExtras = true;
-      "com.apple.desktopservices" = {
-        DSDontWriteNetworkStores = true;
-        DSDontWriteUSBStores = true;
-      };
+			"com.apple.desktopservices" = {
+				DSDontWriteNetworkStores = true;
+				DSDontWriteUSBStores = true;
+			};
       "com.apple.finder" = {
         ShowExternalHardDrivesOnDesktop = false;
         ShowHardDrivesOnDesktop = false;
@@ -100,6 +100,7 @@
     };
     NSGlobalDomain = {
       AppleShowAllExtensions = true;
+			AppleShowAllFiles = true;
       InitialKeyRepeat = 14;
       KeyRepeat = 1;
     };
@@ -116,7 +117,17 @@
     };
     finder = {
       AppleShowAllExtensions = true;
+			ShowPathbar = true;
+			ShowStatusBar = true;
       _FXShowPosixPathInTitle = true;
     };
+		loginwindow = {
+			GuestEnabled = false;
+		};
+		trackpad = {
+			Clicking = true;
+			TrackpadRightClick = true;
+			TrackpadThreeFingerDrag = true;
+		};
   };
 }
