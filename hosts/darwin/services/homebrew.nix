@@ -18,6 +18,7 @@
       "logi-options-plus"
       "notunes"
       "slack"
+      "visual-studio-code"
     ];
 		masApps = {
 			"Amphetamine" = 937984704;

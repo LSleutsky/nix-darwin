@@ -73,61 +73,66 @@
     ];
   };
 
-  system.defaults = {
-    CustomUserPreferences = {
-      NSGlobalDomain.WebKitDeveloperExtras = true;
-			"com.apple.desktopservices" = {
-				DSDontWriteNetworkStores = true;
-				DSDontWriteUSBStores = true;
-			};
-      "com.apple.finder" = {
-        ShowExternalHardDrivesOnDesktop = false;
-        ShowHardDrivesOnDesktop = false;
-        ShowMountedServersOnDesktop = false;
-        ShowRemovableMediaOnDesktop = true;
-        FXDefaultSearchScope = "SCcf";
-        _FXSortFoldersFirst = true;
+  system = {
+    activationScripts.postUserActivation.text = ''
+      /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+    '';
+    defaults = {
+      CustomUserPreferences = {
+        NSGlobalDomain.WebKitDeveloperExtras = true;
+			  "com.apple.desktopservices" = {
+				  DSDontWriteNetworkStores = true;
+				  DSDontWriteUSBStores = true;
+			  };
+        "com.apple.finder" = {
+          ShowExternalHardDrivesOnDesktop = false;
+          ShowHardDrivesOnDesktop = false;
+          ShowMountedServersOnDesktop = false;
+          ShowRemovableMediaOnDesktop = true;
+          FXDefaultSearchScope = "SCcf";
+          _FXSortFoldersFirst = true;
+        };
+        "com.apple.print.PrintingPrefs" = {
+          "Quit When Finished" = true;
+        };
+        "com.apple.SoftwareUpdate" = {
+          AutomaticCheckEnabled = false;
+          ScheduleFrequency = 0;
+          AutomaticDownload = 0;
+          CriticalUpdateInstall = 0;
+        };
       };
-      "com.apple.print.PrintingPrefs" = {
-        "Quit When Finished" = true;
+      NSGlobalDomain = {
+        AppleShowAllExtensions = true;
+			  AppleShowAllFiles = true;
+        InitialKeyRepeat = 14;
+        KeyRepeat = 1;
       };
-      "com.apple.SoftwareUpdate" = {
-        AutomaticCheckEnabled = false;
-        ScheduleFrequency = 0;
-        AutomaticDownload = 0;
-        CriticalUpdateInstall = 0;
+      dock = {
+        autohide = true;
+        autohide-delay = 0.0;
+        autohide-time-modifier = 0.2;
+        expose-animation-duration = 0.2;
+        launchanim = true;
+        showhidden = true;
+        show-recents = false;
+        show-process-indicators = true;
+        orientation = "bottom";
       };
+      finder = {
+        AppleShowAllExtensions = true;
+			  ShowPathbar = true;
+			  ShowStatusBar = true;
+        _FXShowPosixPathInTitle = true;
+      };
+		  loginwindow = {
+			  GuestEnabled = false;
+		  };
+		  trackpad = {
+			  Clicking = true;
+			  TrackpadRightClick = true;
+			  TrackpadThreeFingerDrag = true;
+		  };
     };
-    NSGlobalDomain = {
-      AppleShowAllExtensions = true;
-			AppleShowAllFiles = true;
-      InitialKeyRepeat = 14;
-      KeyRepeat = 1;
-    };
-    dock = {
-      autohide = true;
-      autohide-delay = 0.0;
-      autohide-time-modifier = 0.2;
-      expose-animation-duration = 0.2;
-      launchanim = true;
-      showhidden = true;
-      show-recents = false;
-      show-process-indicators = true;
-      orientation = "bottom";
-    };
-    finder = {
-      AppleShowAllExtensions = true;
-			ShowPathbar = true;
-			ShowStatusBar = true;
-      _FXShowPosixPathInTitle = true;
-    };
-		loginwindow = {
-			GuestEnabled = false;
-		};
-		trackpad = {
-			Clicking = true;
-			TrackpadRightClick = true;
-			TrackpadThreeFingerDrag = true;
-		};
   };
 }
