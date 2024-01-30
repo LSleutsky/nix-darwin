@@ -17,7 +17,7 @@
       nxp = "$HOME/.config/nix-darwin/modules/home-manager/packages";
       nxv = "$HOME/.config/nix-darwin/modules/nixvim";
       pics = "$HOME/Pictures";
-      repos = "$HOME/repos";
+      repos = "$HOME/.local/share/repos";
       vids = "$HOME/Videos";
     };
     history = {
@@ -79,6 +79,7 @@
       j = "__zoxide_z";
       man = "batman";
       mkdir = "mkdir -p";
+      nb = "nvim $HOME/.config/nix-darwin/hosts/darwin/services/homebrew.nix";
       nd = "nvim $HOME/.config/nix-darwin/hosts/darwin/default.nix";
       nf = "nvim $HOME/.config/nix-darwin/flake.nix";
       nh = "nvim $HOME/.config/nix-darwin/modules/home-manager/default.nix";
