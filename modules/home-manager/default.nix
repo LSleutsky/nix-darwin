@@ -24,13 +24,11 @@
 
   home.stateVersion = "24.05";
   home.packages = with pkgs; [
-		_1password-gui-beta
     _1password
     asciinema
     asciiquarium
     cmatrix
     curl
-    discord
     duf
     fd
     figlet
@@ -47,7 +45,6 @@
     onefetch
 		pipes-rs
     scc
-    spotify
     tlrc
     tree
     yamllint

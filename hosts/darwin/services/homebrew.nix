@@ -14,10 +14,12 @@
 		};
     casks = [
       "boom-3d"
+      "discord"
       "istat-menus"
       "logi-options-plus"
       "notunes"
       "slack"
+      "spotify"
       "visual-studio-code"
     ];
 		masApps = {

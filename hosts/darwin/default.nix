@@ -105,6 +105,8 @@
       NSGlobalDomain = {
         AppleShowAllExtensions = true;
 			  AppleShowAllFiles = true;
+        AppleEnableSwipeNavigateWithScrolls = true;
+        AppleInterfaceStyle = "Dark";
         InitialKeyRepeat = 14;
         KeyRepeat = 1;
       };

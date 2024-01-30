@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 		nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 		nixvim.url = "github:nix-community/nixvim";
     yazi.url = "github:sxyazi/yazi";
@@ -36,7 +35,7 @@
 		};
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, chaotic, nixvim, ... } @inputs:
+  outputs = { self, darwin, nixpkgs, home-manager, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, nixvim, ... } @inputs:
 
   let
 		user = "lush";
@@ -77,7 +76,6 @@
             home-manager.useUserPackages = true;
             home-manager.users.${user} = import ./modules/home-manager;
           }
-          chaotic.homeManagerModules.default
 					nixvim.nixDarwinModules.nixvim
           ./modules/nixvim
           ./hosts/darwin
