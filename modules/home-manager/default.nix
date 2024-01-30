@@ -1,5 +1,4 @@
 { config, lib, pkgs, ... }:
-
 {
   imports = [
     ./dotfiles/ignore.nix
@@ -22,38 +21,42 @@
     ./packages/zsh.nix
   ];
 
-  home.stateVersion = "24.05";
-  home.packages = with pkgs; [
-    _1password
-    asciinema
-    asciiquarium
-    cmatrix
-    curl
-    duf
-    fd
-    figlet
-		fortune
-    glow
-    imagemagick
-    jq
-		lolcat
-    nano
-    nanorc
-		neo-cowsay
-    neofetch
-    ngrok
-    onefetch
-		pipes-rs
-    scc
-    tlrc
-    tree
-    yamllint
-    zk
+  home = {
+    stateVersion = "24.05";
+    packages = with pkgs; [
+      _1password
+      asciinema
+      asciiquarium
+      cmatrix
+      curl
+      duf
+      fd
+      figlet
+		  fortune
+      glow
+      imagemagick
+      jdk
+      jq
+		  lolcat
+      nano
+      nanorc
+		  neo-cowsay
+      neofetch
+      ngrok
+      nodejs_18
+      onefetch
+		  pipes-rs
+      scc
+      tlrc
+      tree
+      yamllint
+      zk
 
-    (ripgrep-all.overrideAttrs (old: {
-      doInstallCheck = false;
-    }))
-  ];
+      (ripgrep-all.overrideAttrs (old: {
+        doInstallCheck = false;
+      }))
+    ];
+  };
 
   xdg.enable = true;
 }

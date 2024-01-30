@@ -35,6 +35,7 @@
       EDITOR = "nvim";
 			NIXPKGS_ALLOW_BROKEN = "1";
 			NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM = "1";
+      NPM_CONFIG_PREFIX = "~/.npm-global";
       SUDO_EDITOR = "nvim";
       PAGER = "less";
     };

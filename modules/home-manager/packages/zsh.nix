@@ -139,6 +139,7 @@
       bindkey "^[OB" down-line-or-beginning-search
       bindkey '^w' zsh-backward-kill-word
 
+      eval "$(/opt/homebrew/bin/brew shellenv)"
       eval "$(op completion zsh)"; compdef _op op
       eval $(thefuck --alias --enable-experimental-instant-mode)
     '';
