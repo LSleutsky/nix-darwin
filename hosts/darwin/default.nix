@@ -95,6 +95,9 @@
         "com.apple.print.PrintingPrefs" = {
           "Quit When Finished" = true;
         };
+        "com.apple.security.authorization" = {
+          ignoreArd = true;
+        };
         "com.apple.SoftwareUpdate" = {
           AutomaticCheckEnabled = false;
           ScheduleFrequency = 0;
