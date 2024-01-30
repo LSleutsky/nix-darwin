@@ -96,6 +96,7 @@
           "Quit When Finished" = true;
         };
         "com.apple.security.authorization" = {
+          # for DisplayLink sudo auth prompt
           ignoreArd = true;
         };
         "com.apple.SoftwareUpdate" = {
