@@ -101,6 +101,9 @@
           AutomaticDownload = 0;
           CriticalUpdateInstall = 0;
         };
+        "digital.twisted.noTunes" = {
+          replacement = "/Applications/Spotify.app";
+        };
       };
       NSGlobalDomain = {
         AppleShowAllExtensions = true;
