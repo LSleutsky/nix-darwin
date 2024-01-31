@@ -33,9 +33,19 @@
 			url = "github:homebrew/homebrew-cask";
 			flake = false;
 		};
+
+		homebrew-cask-versions = {
+			url = "github:homebrew/homebrew-cask-versions";
+			flake = false;
+		};
+
+		homebrew-cask-fonts = {
+			url = "github:homebrew/homebrew-cask-fonts";
+			flake = false;
+		};
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, nixvim, ... } @inputs:
+  outputs = { self, darwin, nixpkgs, home-manager, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, homebrew-cask-versions, homebrew-cask-fonts, nixvim, ... } @inputs:
 
   let
 		user = "lush";
@@ -64,6 +74,8 @@
 								"homebrew/homebrew-bundle" = homebrew-bundle;
 								"homebrew/homebrew-core" = homebrew-core;
 								"homebrew/homebrew-cask" = homebrew-cask;
+								"homebrew/homebrew-cask-versions" = homebrew-cask-versions;
+								"homebrew/homebrew-cask-fonts" = homebrew-cask-fonts;
 							};
 							mutableTaps = false;
 							autoMigrate = true;

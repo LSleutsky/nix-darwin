@@ -15,12 +15,14 @@
     casks = [
       "boom-3d"
       "discord"
+      "docker"
       "istat-menus"
       "logi-options-plus"
       "notunes"
       "slack"
       "spotify"
       "visual-studio-code"
+      "wezterm-nightly"
     ];
 		masApps = {
 			"Amphetamine" = 937984704;
