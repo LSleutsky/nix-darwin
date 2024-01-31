@@ -43,7 +43,6 @@
 		  neo-cowsay
       neofetch
       ngrok
-      nodejs_18
       onefetch
 		  pipes-rs
       scc
