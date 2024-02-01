@@ -31,6 +31,7 @@
       cmatrix
       curl
       duf
+      fastfetch
       fd
       figlet
 		  fortune
@@ -47,7 +48,7 @@
       onefetch
 		  pipes-rs
       scc
-      tlrc
+      tealdeer
       tree
       yamllint
       zk

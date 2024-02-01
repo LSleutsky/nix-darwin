@@ -1,4 +1,4 @@
-{ config, lib, inputs, ... }:
+{ config, ... }:
 
 {
   xdg.configFile."neofetch/config.conf" = {

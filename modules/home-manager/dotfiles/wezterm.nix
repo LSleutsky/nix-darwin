@@ -1,5 +1,3 @@
-{ config, lib, inputs, ... }:
-
 {
   xdg.configFile."wezterm/wezterm.lua" = {
     enable = true;
