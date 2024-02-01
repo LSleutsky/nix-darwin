@@ -62,6 +62,7 @@
       gcof = "git checkout --";
       gcom = "git checkout $(git_main_branch)";
       gd = "git diff";
+      gdf = "git diff ':!flake.lock'";
       gdn = "git diff --name-only";
       gfp = "git fetch --all --prune && git pull --rebase origin $(git symbolic-ref --short HEAD)";
       ggf = "git push --force origin $(git symbolic-ref --short HEAD)";
@@ -84,6 +85,8 @@
       nf = "nvim $HOME/.config/nix-darwin/flake.nix";
       nh = "nvim $HOME/.config/nix-darwin/modules/home-manager/default.nix";
       nv = "nvim $HOME/.config/nix-darwin/modules/nixvim/default.nix";
+      nw = "nvim $HOME/.config/nix-darwin/modules/home-manager/dotfiles/wezterm.nix";
+      nz = "nvim $HOME/.config/nix-darwin/modules/home-manager/packages/zsh.nix";
       rebuild = "nix flake update && darwin-rebuild switch --flake .";
       n = "nvim";
       sn = "sudo -Es nvim";

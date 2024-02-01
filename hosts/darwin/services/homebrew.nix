@@ -17,9 +17,9 @@
       "discord"
       "docker"
       "istat-menus"
+      "iterm2-nightly"
       "logi-options-plus"
       "notunes"
-      "slack"
       "spotify"
       "visual-studio-code"
       "wezterm-nightly"
@@ -27,6 +27,7 @@
 		masApps = {
 			"Amphetamine" = 937984704;
 			"myPoint Light S" = 518658487;
+      "Slack for Desktop" = 803453959;
 		};
   };
 }
