@@ -6,7 +6,6 @@
 		nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 		nixvim.url = "github:nix-community/nixvim";
-    yazi.url = "github:sxyazi/yazi";
 
 		darwin = {
 			url = "github:LnL7/nix-darwin/master";

@@ -18,7 +18,6 @@
     ./packages/starship.nix
     ./packages/thefuck.nix
     ./packages/watson.nix
-    ./packages/yazi.nix
     ./packages/zoxide.nix
     ./packages/zsh.nix
   ];

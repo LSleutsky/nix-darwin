@@ -88,6 +88,7 @@
       nv = "nvim $HOME/.config/nix-darwin/modules/nixvim/default.nix";
       nw = "nvim $HOME/.config/nix-darwin/modules/home-manager/dotfiles/wezterm.nix";
       nz = "nvim $HOME/.config/nix-darwin/modules/home-manager/packages/zsh.nix";
+      rd = "rm -rf .DS_Store";
       rebuild = "nix flake update && darwin-rebuild switch --flake .";
       n = "nvim";
       sn = "sudo -Es nvim";
