@@ -36,6 +36,7 @@
       figlet
 		  fortune
       glow
+      hugo
       imagemagick
       jdk
       jq
