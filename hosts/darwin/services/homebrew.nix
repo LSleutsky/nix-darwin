@@ -13,6 +13,7 @@
 			upgrade = true;
 		};
     casks = [
+      "adobe-creative-cloud"
       "boom-3d"
       "discord"
       "docker"
