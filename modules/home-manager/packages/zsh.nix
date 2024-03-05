@@ -84,7 +84,6 @@
       nd = "nvim $HOME/.config/nix-darwin/hosts/darwin/default.nix";
       nf = "nvim $HOME/.config/nix-darwin/flake.nix";
       nh = "nvim $HOME/.config/nix-darwin/modules/home-manager/default.nix";
-      nt = "nvim $HOME/.config/nix-darwin/modules/home-manager/dotfiles/hyper.nix";
       nv = "nvim $HOME/.config/nix-darwin/modules/nixvim/default.nix";
       nw = "nvim $HOME/.config/nix-darwin/modules/home-manager/dotfiles/wezterm.nix";
       nz = "nvim $HOME/.config/nix-darwin/modules/home-manager/packages/zsh.nix";

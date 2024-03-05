@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
-    ./dotfiles/hyper.nix
     ./dotfiles/ignore.nix
     ./dotfiles/nanorc.nix
     ./dotfiles/neofetch.nix
