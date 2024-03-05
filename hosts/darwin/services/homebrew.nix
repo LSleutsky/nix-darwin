@@ -31,6 +31,7 @@
       "wezterm-nightly"
     ];
 		masApps = {
+      "Amazon Kindle" = 302584613;
 			"Amphetamine" = 937984704;
 			"myPoint Light S" = 518658487;
       "Slack for Desktop" = 803453959;
