@@ -12,7 +12,6 @@
     ./packages/eza.nix
     ./packages/fzf.nix
     ./packages/git.nix
-    ./packages/ncmpcpp.nix
     ./packages/ripgrep.nix
     ./packages/starship.nix
     ./packages/thefuck.nix
@@ -33,23 +32,24 @@
       fastfetch
       fd
       figlet
-		  fortune
+      fortune
       glow
       hugo
       imagemagick
       jdk
       jq
-		  lolcat
+      lolcat
       nano
       nanorc
-		  neo-cowsay
+      neo-cowsay
       neofetch
       ngrok
       onefetch
-		  pipes-rs
+      pipes-rs
       scc
       tealdeer
       tree
+      weather
       yamllint
       zk
 

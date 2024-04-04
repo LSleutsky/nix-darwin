@@ -28,7 +28,6 @@
       "postman-cli"
       "spotify"
       "visual-studio-code"
-      "wezterm-nightly"
     ];
 		masApps = {
       "Amazon Kindle" = 302584613;

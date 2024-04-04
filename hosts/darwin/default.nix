@@ -21,7 +21,6 @@
       options = "--delete-old";
     };
     settings = {
-      auto-optimise-store = true;
       trusted-users = ["@admin"];
       experimental-features = ["nix-command" "flakes"];
     };

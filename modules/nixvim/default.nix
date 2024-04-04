@@ -39,7 +39,7 @@
         properties = ["italic"];
       };
     };
-    options = {
+    opts = {
 			incsearch = true;
       number = true;
       numberwidth = 2;
@@ -370,6 +370,7 @@
 			nix.enable = true;
 			nix-develop.enable = true;
 			surround.enable = true;
+      trouble.enable = true;
       ts-autotag.enable = true;
       auto-session = {
         enable = true;
@@ -392,9 +393,15 @@
           };
         };
       };
-      comment-nvim = {
+      cmp = {
         enable = true;
-        padding = true;
+        autoEnableSources = true;
+      };
+      comment = {
+        enable = true;
+        settings = {
+          padding = true;
+        };
       };
       diffview = {
         enable = true;
@@ -406,12 +413,12 @@
       };
       gitsigns = {
         enable = true;
-        currentLineBlame = true;
-        signcolumn = true;
-        trouble = true;
-        currentLineBlameFormatter = {
-          nonCommitted = " <author>, <author_time>";
-          normal = " <author>, <author_time:%Y-%m-%d> at <author_time:%I:%M %p> - <summary>";
+        settings = {
+          current_line_blame = true;
+          signcolumn = true;
+          trouble = true;
+          current_line_blame_formatter = " <author>, <author_time:%Y-%m-%d> at <author_time:%I:%M %p> - <summary>";
+          current_line_blame_formatter_nc = " <author>, <author_time>";
         };
       };
       lualine = {
@@ -462,12 +469,6 @@
         enableBracketInQuote = true;
         enableCheckBracketLine = false;
         enableMoveright = true;
-      };
-      nvim-cmp = {
-        enable = true;
-        autoEnableSources = true;
-        snippet.expand = "luasnip";
-        completion.autocomplete = ["TextChanged" "TextChangedI"];
       };
 			nvim-colorizer = {
 				enable = true;
@@ -537,7 +538,7 @@
 				textObj.enable = true;
 				matchParen = {
 					enable = true;
-					deffered.enable = true;
+					deferred.enable = true;
 					hiSurroundAlways = true;
 				};
 			};

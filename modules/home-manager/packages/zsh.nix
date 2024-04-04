@@ -4,8 +4,8 @@
   programs.zsh = {
     enable = true;
     autocd = true;
-    enableAutosuggestions = true;
     enableCompletion = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     dirHashes = {
       cfg = "$HOME/.config";
