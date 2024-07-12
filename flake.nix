@@ -17,7 +17,6 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		
-
 		homebrew-bundle = {
 			url = "github:homebrew/homebrew-bundle";
 			flake = false;
@@ -54,7 +53,7 @@
 				allowUnsupportedSystem = true;
         allowBroken = true;
 			};
-      overlays = [inputs.neovim-nightly-overlay.overlay];
+      overlays = [inputs.neovim-nightly-overlay.overlays.default];
     };
   in
   {

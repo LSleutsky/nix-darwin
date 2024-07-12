@@ -8,35 +8,37 @@
     globals.mapleader = " ";
     colorschemes.catppuccin = {
       enable = true;
-      background.dark = "mocha";
-      flavour = "mocha";
-      terminalColors = true;
-      integrations = {
-        gitsigns = true;
-        native_lsp.enabled = true;
-        navic.enabled = true;
-        nvimtree = true;
-        telescope.enabled = true;
-        treesitter = true;
-        treesitter_context = true;
-        ts_rainbow2 = true;
-        illuminate = {
-          enabled = true;
-          lsp = true;
+      settings = {
+        background.dark = "mocha";
+        flavour = "mocha";
+        integrations = {
+          gitsigns = true;
+          native_lsp.enabled = true;
+          navic.enabled = true;
+          nvimtree = true;
+          telescope.enabled = true;
+          treesitter = true;
+          treesitter_context = true;
+          ts_rainbow2 = true;
+          illuminate = {
+            enabled = true;
+            lsp = true;
+          };
+          indent_blankline = {
+            enabled = true;
+            colored_indent_levels = true;
+          };
         };
-        indent_blankline = {
-          enabled = true;
-          colored_indent_levels = true;
+        styles = {
+          booleans = ["bold" "italic"];
+          conditionals = ["bold"];
+          functions = ["bold"];
+          keywords = ["italic"];
+          loops = ["bold"];
+          operators = ["bold"];
+          properties = ["italic"];
         };
-      };
-      styles = {
-        booleans = ["bold" "italic"];
-        conditionals = ["bold"];
-        functions = ["bold"];
-        keywords = ["italic"];
-        loops = ["bold"];
-        operators = ["bold"];
-        properties = ["italic"];
+        term_colors = true;
       };
     };
     opts = {
@@ -383,13 +385,16 @@
       };
       barbar = {
         enable = true;
-        autoHide = false;
-        clickable = true;
-        icons = {
-          visible.bufferNumber = true;
-          current = {
-            filetype.enable = true;
-            pinned.filetype.enable = true;
+        settings = {
+          auto_hide = false;
+          clickable = true;
+          icons = {
+            buffer_number = true;
+            button = "x";
+            current = {
+              filetype.enable = true;
+              pinned.filetype.enable = true;
+            };
           };
         };
       };
@@ -465,10 +470,12 @@
 			};
       nvim-autopairs = {
         enable = true;
-        enableAfterQuote = true;
-        enableBracketInQuote = true;
-        enableCheckBracketLine = false;
-        enableMoveright = true;
+        settings = {
+          enable_after_quote = true;
+          enable_bracket_in_line = false;
+          enable_bracket_in_quote = true;
+          enable_move_right = true;
+        };
       };
 			nvim-colorizer = {
 				enable = true;
@@ -515,12 +522,17 @@
           signcolumn = "yes";
         };
       };
+      telescope = {
+        enable = true;
+      };
       treesitter = {
         enable = true;
-        incrementalSelection.enable = true;
-        indent = true;
         nixGrammars = true;
         nixvimInjections = true;
+        settings = {
+          incremental_selection.enable = true;
+          indent.enable = true;
+        };
       };
       treesitter-refactor = {
         enable = true;
@@ -544,8 +556,10 @@
 			};
       zk = {
         enable = true;
-        picker = "telescope";
-        lsp.autoAttach.enabled = true;
+        settings = {
+          lsp.auto_attach.enabled = true;
+          picker = "telescope";
+        };
       };
 		};
     extraPlugins = with pkgs.vimPlugins; [
