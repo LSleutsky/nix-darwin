@@ -12,6 +12,10 @@
 			cleanup = "zap";
 			upgrade = true;
 		};
+    brews = [
+      "cbonsai"
+      "tty-clock"
+    ];
     casks = [
       "adobe-creative-cloud"
       "boom-3d"

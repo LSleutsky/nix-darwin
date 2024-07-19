@@ -46,6 +46,7 @@
       "........." = "cd ../../../../../../../../";
       ".........." = "cd ../../../../../../../../../";
       clock = "tty-clock -bcsC4 -f %a,\\ %d\\ %b\\ %Y";
+      cbonsai = "cbonsai --live --infinite";
       dir = "tree -ad -C -I '.git' -I 'node_modules'";
       df = "df -h";
       free = "free -mth";
