@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ ... }:
 
 {
   homebrew = {
@@ -14,6 +14,7 @@
 		};
     brews = [
       "cbonsai"
+      "docker-compose"
       "tty-clock"
     ];
     casks = [
@@ -24,6 +25,7 @@
       "dropbox@beta"
       "evernote"
       "font-monaspace"
+      "google-chrome"
       "istat-menus"
       "iterm2@nightly"
       "logi-options-plus"
