@@ -28,7 +28,6 @@
       "google-chrome"
       "istat-menus"
       "iterm2@nightly"
-      "logi-options-plus"
       "notunes"
       "postman"
       "postman-cli"

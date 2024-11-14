@@ -29,7 +29,6 @@
   environment = {
     darwinConfig = "$HOME/.config/nix-darwin/configuration.nix";
     shells = with pkgs; [bashInteractive zsh];
-    loginShell = pkgs.zsh;
     variables = {
       EDITOR = "nvim";
 			NIXPKGS_ALLOW_BROKEN = "1";
@@ -141,5 +140,6 @@
 			  TrackpadThreeFingerDrag = true;
 		  };
     };
+    stateVersion = 5;
   };
 }

@@ -371,16 +371,17 @@
 			indent-blankline.enable = true;
 			nix.enable = true;
 			nix-develop.enable = true;
-			surround.enable = true;
       trouble.enable = true;
       ts-autotag.enable = true;
+      vim-surround.enable = true;
+      web-devicons.enable = true;
       auto-session = {
         enable = true;
-        autoRestore.enabled = true;
-        autoSave.enabled = true;
-        autoSession = {
+        settings = {
           enabled = true;
-          enableLastSession = true;
+          auto_restore = true;
+          auto_save = true;
+          auto_restore_last_session = true;
         };
       };
       barbar = {
@@ -428,20 +429,24 @@
       };
       lualine = {
         enable = true;
-        iconsEnabled = true;
-        theme = "catppuccin";
-        sections = {
-          lualine_a = ["mode"];
-          lualine_b = ["branch" "diff" "diagnostics"];
-          lualine_c = [ "vim.fn.expand('%:~')" "navic" ];
-          lualine_x = ["filetype"];
-          lualine_y = ["progress"];
-          lualine_z = ["location"];
+        settings = {
+          options = {
+            icons_enabled = true;
+            theme = "catppuccin";
+          };
+          sections = {
+            lualine_a = ["mode"];
+            lualine_b = ["branch" "diff" "diagnostics"];
+            lualine_c = [ "vim.fn.expand('%:~')" "navic" ];
+            lualine_x = ["filetype"];
+            lualine_y = ["progress"];
+            lualine_z = ["location"];
+          };
         };
       };
       luasnip = {
         enable = true;
-        extraConfig = {
+        settings = {
           enable_autosnippets = true;
           store_selection_keys = "<Tab>";
         };
@@ -455,18 +460,19 @@
           eslint.enable = true;
           html.enable = true;
           jsonls.enable = true;
-          lua-ls.enable = true;
+          lua_ls.enable = true;
           nixd.enable = true;
-          rnix-lsp.enable = true;
           tailwindcss.enable = true;
-          tsserver.enable = true;
+          ts_ls.enable = true;
           yamlls.enable = true;
         };
       };
 			navic = {
 				enable = true;
-				highlight = true;
-        lsp.autoAttach = true;
+        settings = {
+          highlight = true;
+          lsp.autoAttach = true;
+        };
 			};
       nvim-autopairs = {
         enable = true;
