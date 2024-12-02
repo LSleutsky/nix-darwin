@@ -34,6 +34,7 @@
       figlet
       fortune
       glow
+      google-chrome
       hugo
       imagemagick
       jdk
