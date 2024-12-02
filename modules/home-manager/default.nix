@@ -23,7 +23,7 @@
   home = {
     stateVersion = "24.11";
     packages = with pkgs; [
-      _1password
+      _1password-cli
       asciinema
       asciiquarium
       cmatrix

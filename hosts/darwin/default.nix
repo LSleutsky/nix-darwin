@@ -57,16 +57,12 @@
 
   fonts = {
     packages = with pkgs; [
-      (nerdfonts.override {
-        fonts = [
-          "ComicShannsMono"
-          "FiraCode"
-          "Hack"
-          "JetBrainsMono"
-          "Mononoki"
-          "RobotoMono"
-        ];
-      })
+      nerd-fonts.comic-shanns-mono
+      nerd-fonts.fira-code
+      nerd-fonts.hack
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.mononoki
+      nerd-fonts.roboto-mono
     ];
   };
 
