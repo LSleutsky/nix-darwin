@@ -483,17 +483,6 @@
           enable_move_right = true;
         };
       };
-			nvim-colorizer = {
-				enable = true;
-				userDefaultOptions = {
-					css = true;
-					css_fn = true;
-					hsl_fn = true;
-					names = true;
-					rgb_fn = true;
-					tailwind = true;
-				};
-			};
       nvim-tree = {
         enable = true;
         git = {
@@ -551,14 +540,14 @@
         };
       };
 			vim-matchup = {
-				enable = true;
-				enableSurround = true;
-				textObj.enable = true;
-				matchParen = {
-					enable = true;
-					deferred.enable = true;
-					hiSurroundAlways = true;
-				};
+        settings = {
+          enabled = 1;
+          match_paren_enabled = 1;
+          matchparen_deferred = 1;
+          matchparen_deferred_hi_surround_always = 1;
+          text_obj_enabled = 1;
+          surround_enabled = 1;
+        };
 			};
       zk = {
         enable = true;
