@@ -11,6 +11,7 @@
     ./packages/command-not-found.nix
     ./packages/eza.nix
     ./packages/fzf.nix
+    ./packages/ghostty.nix
     ./packages/git.nix
     ./packages/ripgrep.nix
     ./packages/starship.nix
