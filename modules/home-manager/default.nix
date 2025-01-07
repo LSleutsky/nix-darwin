@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./dotfiles/ghostty.nix
     ./dotfiles/ignore.nix
     ./dotfiles/nanorc.nix
     ./dotfiles/neofetch.nix
