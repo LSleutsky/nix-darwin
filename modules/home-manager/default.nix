@@ -42,6 +42,7 @@
       jdk
       jq
       lolcat
+      mousecape
       nano
       nanorc
       neo-cowsay
