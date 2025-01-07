@@ -15,10 +15,12 @@
     brews = [
       "cbonsai"
       "docker-compose"
+      "mas"
       "tty-clock"
     ];
     casks = [
       "adobe-creative-cloud"
+      "alt-tab"
       "boom-3d"
       "discord"
       "docker"

@@ -7,7 +7,6 @@
     ./dotfiles/nanorc.nix
     ./dotfiles/neofetch.nix
     ./dotfiles/vimrc.nix
-    ./dotfiles/wezterm.nix
     ./packages/bat.nix
     ./packages/btop.nix
     ./packages/command-not-found.nix
