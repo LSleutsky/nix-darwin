@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./dotfiles/fastfetch.nix
     ./dotfiles/ghostty.nix
     ./dotfiles/ignore.nix
     ./dotfiles/nanorc.nix
