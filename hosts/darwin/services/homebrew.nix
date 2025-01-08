@@ -35,7 +35,6 @@
       "notunes"
       "postman"
       "postman-cli"
-      "skype"
       "spotify"
       "visual-studio-code"
     ];
