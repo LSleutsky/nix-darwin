@@ -80,7 +80,6 @@
 					}
           {
             nixpkgs = nixpkgsConfig;
-						nixpkgs.overlays = overlays;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
