@@ -15,7 +15,6 @@
       nxh = "$HOME/.config/nix-darwin/hosts/darwin";
       nxm = "$HOME/.config/nix-darwin/modules/home-manager";
       nxp = "$HOME/.config/nix-darwin/modules/home-manager/packages";
-      nxv = "$HOME/.config/nix-darwin/modules/nixvim";
       pics = "$HOME/Pictures";
       repos = "$HOME/.local/share/repos";
       vids = "$HOME/Videos";
@@ -86,7 +85,6 @@
       nd = "nvim $HOME/.config/nix-darwin/hosts/darwin/default.nix";
       nf = "nvim $HOME/.config/nix-darwin/flake.nix";
       nh = "nvim $HOME/.config/nix-darwin/modules/home-manager/default.nix";
-      nv = "nvim $HOME/.config/nix-darwin/modules/nixvim/default.nix";
       nz = "nvim $HOME/.config/nix-darwin/modules/home-manager/packages/zsh.nix";
       rd = "rm -rf .DS_Store";
       rebuild = "nix flake update && darwin-rebuild switch --flake .";
