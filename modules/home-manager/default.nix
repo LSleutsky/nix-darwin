@@ -41,7 +41,6 @@
       jdk
       jq
       lolcat
-      lunarvim
       mousecape
       nano
       nanorc
