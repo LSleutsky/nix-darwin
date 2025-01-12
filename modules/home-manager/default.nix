@@ -4,6 +4,7 @@
     ./dotfiles/fastfetch.nix
     ./dotfiles/ghostty.nix
     ./dotfiles/ignore.nix
+    ./dotfiles/lunarvim.nix
     ./dotfiles/nanorc.nix
     ./dotfiles/neofetch.nix
     ./dotfiles/vimrc.nix
@@ -41,6 +42,7 @@
       jdk
       jq
       lolcat
+      lunarvim
       mousecape
       nano
       nanorc
