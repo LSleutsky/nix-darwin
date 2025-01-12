@@ -46,6 +46,7 @@
       nanorc
       neo-cowsay
       neofetch
+      neovim
       ngrok
       onefetch
       pipes-rs

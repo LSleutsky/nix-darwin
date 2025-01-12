@@ -29,9 +29,6 @@
   environment = {
     darwinConfig = "$HOME/.config/nix-darwin/configuration.nix";
     shells = with pkgs; [bashInteractive zsh];
-    systemPackages = [
-      inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
-    ];
     variables = {
       EDITOR = "nvim";
 			NIXPKGS_ALLOW_BROKEN = "1";
