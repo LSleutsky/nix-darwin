@@ -1,4 +1,5 @@
 { config, lib, pkgs, ... }:
+
 {
   imports = [
     ./dotfiles/fastfetch.nix
@@ -46,7 +47,6 @@
       nanorc
       neo-cowsay
       neofetch
-      neovim
       ngrok
       onefetch
       pipes-rs

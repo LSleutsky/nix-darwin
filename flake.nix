@@ -40,9 +40,14 @@
 			url = "github:homebrew/homebrew-cask-fonts";
 			flake = false;
 		};
+
+		nixvim = {
+			url = "github:nix-community/nixvim/nixos-24.11";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, homebrew-cask-versions, homebrew-cask-fonts, ... } @inputs:
+  outputs = { self, darwin, nixpkgs, home-manager, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, homebrew-cask-versions, homebrew-cask-fonts, nixvim, ... } @inputs:
 
   let
 		user = "lush";
@@ -85,6 +90,8 @@
             home-manager.useUserPackages = true;
             home-manager.users.${user} = import ./modules/home-manager;
           }
+					nixvim.nixDarwinModules.nixvim
+					./modules/nixvim
           ./hosts/darwin
         ];
       };
