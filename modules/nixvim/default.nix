@@ -328,10 +328,15 @@
       illuminate.enable = true;
       indent-blankline.enable = true;
       markdown-preview.enable = true;
+      neoscroll.enable = true;
+      nix.enable = true;
+			nix-develop.enable = true;
+      rainbow-delimiters.enable = true;
       telescope.enable = true;
       todo-comments.enable = true;
       trouble.enable = true;
       ts-autotag.enable = true;
+      vim-css-color.enable = true;
       vim-surround.enable = true;
       barbar = {
         enable = true;
@@ -386,6 +391,10 @@
           current_line_blame_formatter = " <author>, <author_time:%Y-%m-%d> at <author_time:%I:%M %p> - <summary>";
           current_line_blame_formatter_nc = " <author>, <author_time>";
         };
+      };
+      image = {
+        enable = true;
+        integrations.markdown.enabled = true;
       };
       lualine = {
         enable = true;
