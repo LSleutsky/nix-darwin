@@ -165,7 +165,7 @@
       }
       {
         mode = "n";
-        key = "<C-n>";
+        key = "<C-e>";
         action = ":NvimTreeToggle<CR>";
         options = {
           desc = "Toggle file explorer";
@@ -322,10 +322,17 @@
 			}
 		];
     plugins = {
+      cursorline.enable = true;
+      emmet.enable = true;
+      friendly-snippets.enable = true;
+      illuminate.enable = true;
+      indent-blankline.enable = true;
+      markdown-preview.enable = true;
+      telescope.enable = true;
+      todo-comments.enable = true;
       trouble.enable = true;
       ts-autotag.enable = true;
       vim-surround.enable = true;
-      web-devicons.enable = true;
       barbar = {
         enable = true;
         settings = {
@@ -344,6 +351,17 @@
       cmp = {
         enable = true;
         autoEnableSources = true;
+        settings.sources = [
+          { name = "buffer"; }
+          { name = "fuzzy_buffer"; }
+          { name = "fuzzy_path"; }
+          { name = "git"; }
+          { name = "npm"; }
+          { name = "nvim_lsp"; }
+          { name = "path"; }
+          { name = "treesitter"; }
+          { name = "zsh"; }
+        ];
       };
       comment = {
         enable = true;
@@ -459,9 +477,6 @@
           signcolumn = "yes";
         };
       };
-      telescope = {
-        enable = true;
-      };
       treesitter = {
         enable = true;
         nixGrammars = true;
@@ -479,6 +494,12 @@
           keymaps = {
             gotoDefinition = "gd";
           };
+        };
+      };
+      web-devicons = {
+        enable = true;
+        settings = {
+          color_icons = true;
         };
       };
       zk = {
