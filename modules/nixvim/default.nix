@@ -378,6 +378,21 @@
         enable = true;
         useIcons = true;
       };
+      fzf-lua = {
+        enable = true;
+        settings = {
+          files = {
+            color_icons = true;
+            file_icons = true;
+            find_opts = {
+              __raw = "[[-type f -not -path '*.git/*' -not -path '*.env*' -not -path 'node_modules/*']]";
+            };
+            git_icons = true;
+            multiprocess = true;
+            prompt = "Files ❯ ";
+          };
+        };
+      };
       gitlinker = {
         enable = true;
         actionCallback = "open_in_browser";
