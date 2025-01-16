@@ -86,6 +86,7 @@
       nf = "nvim $HOME/.config/nix-darwin/flake.nix";
       nh = "nvim $HOME/.config/nix-darwin/modules/home-manager/default.nix";
       nz = "nvim $HOME/.config/nix-darwin/modules/home-manager/packages/zsh.nix";
+      pipes = "pipes-rs";
       rd = "rm -rf .DS_Store";
       rebuild = "nix flake update && darwin-rebuild switch --flake .";
       n = "nvim";

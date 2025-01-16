@@ -51,6 +51,7 @@
       ngrok
       onefetch
       pipes-rs
+      pngquant
       scc
       tealdeer
       tree
