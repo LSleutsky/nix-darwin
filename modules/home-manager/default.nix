@@ -28,6 +28,7 @@
       _1password-cli
       asciinema
       asciiquarium
+      awscli2
       cmatrix
       curl
       duf
@@ -42,6 +43,7 @@
       imagemagick
       jdk
       jq
+      jpegoptim
       lolcat
       mousecape
       nano
@@ -50,6 +52,7 @@
       neofetch
       ngrok
       onefetch
+      optipng
       pipes-rs
       pngquant
       scc

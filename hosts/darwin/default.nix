@@ -106,6 +106,7 @@
         AppleShowAllExtensions = true;
 			  AppleShowAllFiles = true;
         AppleEnableSwipeNavigateWithScrolls = true;
+        ApplePressAndHoldEnabled = false;
         AppleInterfaceStyle = "Dark";
         InitialKeyRepeat = 14;
         KeyRepeat = 1;

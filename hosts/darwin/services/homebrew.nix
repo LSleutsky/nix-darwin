@@ -17,6 +17,7 @@
       "docker-compose"
       "mas"
       "tty-clock"
+      "webp"
     ];
     casks = [
       "adobe-creative-cloud"
