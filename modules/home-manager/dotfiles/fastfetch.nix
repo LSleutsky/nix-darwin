@@ -89,6 +89,11 @@
             "keyColor": "magenta"
           },
           {
+            "type": "disk",
+            "key": "   Disk Space",
+            "keyColor": "red"
+          },
+          {
             "type": "uptime",
             "key": "  󱫐 Uptime ",
             "keyColor": "red"
