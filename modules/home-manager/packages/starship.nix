@@ -3,6 +3,7 @@
 {
   programs.starship = {
     enable = true;
+    enableBashIntegration = true;
     enableZshIntegration = true;
     settings = {
       format = "$directory$git_branch$git_status$docker_context$character";
@@ -41,7 +42,7 @@
       git_status = {
         format = "([$all_status$ahead_behind]($style) )";
         style = "bg:none fg:#f38ba8";
-        stashed = "$";
+        stashed = "📦";
         ahead = "⇡";
         behind = "⇣";
         up_to_date = "";
