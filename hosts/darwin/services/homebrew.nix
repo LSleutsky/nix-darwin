@@ -16,6 +16,7 @@
       "cbonsai"
       "docker-compose"
       "mas"
+      "postgresql"
       "tty-clock"
       "webp"
     ];

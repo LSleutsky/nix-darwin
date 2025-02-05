@@ -62,7 +62,7 @@
   in
   {
     darwinConfigurations = rec {
-      odinforce = darwin.lib.darwinSystem {
+      odinsbeard = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         lib = nixpkgs.lib;
         modules = [
