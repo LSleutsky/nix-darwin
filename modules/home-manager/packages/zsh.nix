@@ -78,6 +78,7 @@
       gc = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d";
       history = "history -i";
       ip = "ipconfig getifaddr en0";
+      ipv6 = "ifconfig | grep 'inet6' | grep -E -v '(fe80|fd69|::1)'";
       j = "__zoxide_z";
       man = "batman";
       mkdir = "mkdir -p";

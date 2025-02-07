@@ -90,8 +90,6 @@
             home-manager.useUserPackages = true;
             home-manager.users.${user} = import ./modules/home-manager;
           }
-					nixvim.nixDarwinModules.nixvim
-					./modules/nixvim
           ./hosts/darwin
         ];
       };
