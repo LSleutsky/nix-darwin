@@ -6,12 +6,10 @@
   ];
 
   security.pam.enableSudoTouchIdAuth = true;
-  services.nix-daemon.enable = true;
   time.timeZone = "America/New_York";
 
   nix = {
     gc = {
-      user = "root";
       automatic = true;
       interval = {
         Weekday = 0;
@@ -137,6 +135,6 @@
 			  TrackpadThreeFingerDrag = true;
 		  };
     };
-    stateVersion = 5;
+    stateVersion = 4;
   };
 }
