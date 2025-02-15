@@ -42,7 +42,7 @@
 		};
 
 		nixvim = {
-			url = "github:nix-community/nixvim/nixos-24.11";
+			url = "github:nix-community/nixvim";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
   };
@@ -90,6 +90,8 @@
             home-manager.useUserPackages = true;
             home-manager.users.${user} = import ./modules/home-manager;
           }
+					nixvim.nixDarwinModules.nixvim
+					./modules/nixvim
           ./hosts/darwin
         ];
       };
