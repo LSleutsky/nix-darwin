@@ -5,7 +5,7 @@
     ./services/homebrew.nix
   ];
 
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
   time.timeZone = "America/New_York";
 
   nix = {
