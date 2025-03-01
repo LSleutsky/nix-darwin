@@ -38,6 +38,7 @@
       "postman"
       "postman-cli"
       "spotify"
+      "steam"
       "visual-studio-code"
     ];
 		masApps = {
