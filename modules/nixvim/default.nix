@@ -409,7 +409,13 @@
       };
       image = {
         enable = true;
-        integrations.markdown.enabled = true;
+        settings = {
+          integrations = {
+            css.enabled = true;
+            html.enabled = true;
+            markdown.enabled = true;
+          };
+        };
       };
       lualine = {
         enable = true;
