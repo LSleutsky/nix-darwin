@@ -55,6 +55,7 @@
       pipes-rs
       pngquant
       scc
+      supabase-cli
       tealdeer
       tree
       weather
