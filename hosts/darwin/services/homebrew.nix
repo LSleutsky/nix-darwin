@@ -18,6 +18,7 @@
       "mas"
       "postgresql@17"
       "tty-clock"
+      "watchman"
       "webp"
     ];
     casks = [
@@ -40,6 +41,7 @@
       "spotify"
       "steam"
       "visual-studio-code"
+      "zulu@17"
     ];
 		masApps = {
 			"Amphetamine" = 937984704;

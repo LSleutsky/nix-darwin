@@ -183,8 +183,14 @@
         zle backward-kill-word
       }
 
+      export ANDROID_HOME=$HOME/Library/Android/sdk
       export BUN_INSTALL="$HOME/.bun"
+      export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
       export PATH="$BUN_INSTALL/bin:$PATH"
+      export PATH=$PATH:$ANDROID_HOME/emulator
+      export PATH=$PATH:$ANDROID_HOME/platform-tools
+
       export NVM_DIR="$HOME/.config/nvm"
       [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
       [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
