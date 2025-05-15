@@ -37,6 +37,7 @@
       "notunes"
       "postman"
       "postman-cli"
+      "sourcetree"
       "spotify"
       "steam"
       "visual-studio-code"
