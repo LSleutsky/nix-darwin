@@ -66,8 +66,11 @@
         system = "aarch64-darwin";
         lib = nixpkgs.lib;
         modules = [
-          home-manager.darwinModules.home-manager
+					home-manager.darwinModules.home-manager
 					nix-homebrew.darwinModules.nix-homebrew
+					({ config, ... }: {
+						system.primaryUser = user;
+					})
 					{
 						nix-homebrew = {
 							enable = true;
@@ -83,17 +86,17 @@
 							autoMigrate = true;
 						};
 					}
-          {
-            nixpkgs = nixpkgsConfig;
-            home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.${user} = import ./modules/home-manager;
-          }
+					{
+						nixpkgs = nixpkgsConfig;
+						home-manager.extraSpecialArgs = { inherit inputs; };
+						home-manager.useGlobalPkgs = true;
+						home-manager.useUserPackages = true;
+						home-manager.users.${user} = import ./modules/home-manager;
+					}
 					nixvim.nixDarwinModules.nixvim
 					./modules/nixvim
-          ./hosts/darwin
-        ];
+					./hosts/darwin
+				];
       };
     };
   };
