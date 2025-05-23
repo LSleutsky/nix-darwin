@@ -26,7 +26,6 @@
     stateVersion = "24.11";
     packages = with pkgs; [
       _1password-cli
-      _1password-gui
       asciinema
       asciiquarium
       awscli2
