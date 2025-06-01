@@ -7,7 +7,6 @@
     enableZshIntegration = true;
     settings = {
       options = [
-        "--alias"
         "f"
       ];
     };

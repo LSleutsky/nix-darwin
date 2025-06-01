@@ -199,6 +199,7 @@
 
         eval "$(/opt/homebrew/bin/brew shellenv)"
         eval "$(op completion zsh)"; compdef _op op
+        eval "$(pay-respects zsh --alias)"
       ''
     ];
   };
