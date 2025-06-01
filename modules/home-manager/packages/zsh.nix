@@ -89,7 +89,7 @@
       nz = "nvim $HOME/.config/nix-darwin/modules/home-manager/packages/zsh.nix";
       pipes = "pipes-rs";
       rd = "rm -rf .DS_Store";
-      rebuild = "nix flake update && darwin-rebuild switch --flake .";
+      rebuild = "sudo nix flake update && sudo darwin-rebuild switch --flake .";
       n = "nvim";
       sn = "sudo -Es nvim";
       tree = "tree -a -C -I '.git' -I 'node_modules'";
@@ -199,7 +199,6 @@
 
         eval "$(/opt/homebrew/bin/brew shellenv)"
         eval "$(op completion zsh)"; compdef _op op
-        eval $(thefuck --alias --enable-experimental-instant-mode)
       ''
     ];
   };

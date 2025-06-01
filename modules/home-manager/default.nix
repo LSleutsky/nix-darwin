@@ -16,7 +16,6 @@
     ./packages/git.nix
     ./packages/ripgrep.nix
     ./packages/starship.nix
-    ./packages/thefuck.nix
     ./packages/watson.nix
     ./packages/zoxide.nix
     ./packages/zsh.nix
