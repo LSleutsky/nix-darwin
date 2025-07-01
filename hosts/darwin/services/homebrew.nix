@@ -35,6 +35,7 @@
       "iterm2@nightly"
       "logi-options+"
       "notunes"
+      "obsidian"
       "postman"
       "postman-cli"
       "spotify"
