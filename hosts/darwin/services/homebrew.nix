@@ -15,6 +15,8 @@
     brews = [
       "cbonsai"
       "docker-compose"
+      "lua"
+      "luarocks"
       "mas"
       "postgresql@17"
       "tty-clock"
