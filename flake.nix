@@ -30,14 +30,9 @@
 			url = "github:homebrew/homebrew-cask";
 			flake = false;
 		};
-
-		nixvim = {
-			url = "github:nix-community/nixvim";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, nixvim, ... } @inputs:
+  outputs = { self, darwin, nixpkgs, home-manager, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, ... } @inputs:
 
   let
 		user = "lush";
@@ -81,8 +76,6 @@
 						home-manager.useUserPackages = true;
 						home-manager.users.${user} = import ./modules/home-manager;
 					}
-					nixvim.nixDarwinModules.nixvim
-					./modules/nixvim
 					./hosts/darwin
 				];
       };

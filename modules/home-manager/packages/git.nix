@@ -17,7 +17,7 @@
     };
     git = {
       enable = true;
-      package = pkgs.gitFull;
+      package = pkgs.git;
       delta = {
         enable = true;
         options = {
