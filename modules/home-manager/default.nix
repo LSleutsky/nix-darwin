@@ -49,6 +49,7 @@
       nanorc
       neo-cowsay
       neofetch
+      neovim
       ngrok
       onefetch
       optipng
