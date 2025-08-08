@@ -42,6 +42,7 @@
       "postman-cli"
       "spotify"
       "steam"
+      "tailscale"
       "visual-studio-code"
       "zulu@17"
     ];
