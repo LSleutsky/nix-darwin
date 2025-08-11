@@ -7,6 +7,7 @@
       font-size = 10
       theme = catppuccin-mocha
       window-save-state = always
+      keybind = shift+enter=text:\n
     '';
   };
 }
