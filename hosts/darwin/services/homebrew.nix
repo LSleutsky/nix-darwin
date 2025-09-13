@@ -27,6 +27,7 @@
       "adobe-creative-cloud"
       "alt-tab"
       "boom-3d"
+      "calibre"
       "discord"
       "docker"
       "dropbox@beta"

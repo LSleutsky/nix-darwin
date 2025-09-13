@@ -54,6 +54,7 @@
       ngrok
       onefetch
       optipng
+      pandoc
       pipes-rs
       pngquant
       scc
