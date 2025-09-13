@@ -39,6 +39,7 @@
       "logi-options+"
       "notunes"
       "obsidian"
+      "openmtp"
       "postman"
       "postman-cli"
       "spotify"
