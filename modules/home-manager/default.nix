@@ -30,6 +30,7 @@
       asciiquarium
       awscli2
       cmatrix
+      codecrafters-cli
       curl
       duf
       fastfetch
