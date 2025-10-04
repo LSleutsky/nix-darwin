@@ -49,6 +49,9 @@
       "visual-studio-code"
       "zulu@17"
     ];
+    taps = [
+      "homebrew/cask"
+    ]; 
 		masApps = {
 			"Amphetamine" = 937984704;
 			"myPoint Light S" = 518658487;
