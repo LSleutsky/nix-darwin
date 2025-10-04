@@ -5,7 +5,7 @@
     enable = true;
 		global = {
 			autoUpdate = false;
-			brewfile = true;
+			brewfile = false;
 		};
 		onActivation = {
 			autoUpdate = true;
@@ -18,6 +18,7 @@
       "lua"
       "luarocks"
       "mas"
+      "maven"
       "postgresql@17"
       "tty-clock"
       "watchman"
@@ -29,7 +30,7 @@
       "boom-3d"
       "calibre"
       "discord"
-      "docker"
+      "docker-desktop"
       "dropbox@beta"
       "evernote"
       "font-monaspace"
@@ -44,7 +45,7 @@
       "postman-cli"
       "spotify"
       "steam"
-      "tailscale"
+      "tailscale-app"
       "visual-studio-code"
       "zulu@17"
     ];
