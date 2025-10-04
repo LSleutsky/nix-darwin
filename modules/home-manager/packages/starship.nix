@@ -11,9 +11,9 @@
       add_newline = true;
       command_timeout = 2500;
       character = {
-        success_symbol = "[](#a6e3a1 bold)";
-        error_symbol = "[](#f38ba8)";
-        vicmd_symbol = "[](#f9e2af)";
+        success_symbol = "[](#a6e3a1 bold) ";
+        error_symbol = "[](#f38ba8) ";
+        vicmd_symbol = "[](#f9e2af) ";
       };
       directory = {
         format = "[]($style)[ ](bg:#181825 fg:#b4befe)[$path](bg:#181825 fg:#cdd6f4 bold)[ ]($style)";
