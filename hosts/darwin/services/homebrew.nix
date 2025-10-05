@@ -47,7 +47,6 @@
       "steam"
       "tailscale-app"
       "visual-studio-code"
-      "zulu@17"
     ];
     taps = [
       "homebrew/cask"

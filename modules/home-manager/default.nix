@@ -45,6 +45,7 @@
       jdk
       jq
       jpegoptim
+      jre
       lolcat
       mousecape
       nano
