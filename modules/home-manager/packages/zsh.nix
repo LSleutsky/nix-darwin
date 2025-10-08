@@ -129,9 +129,7 @@
 
         export ANDROID_HOME=$HOME/Library/Android/sdk
         export BUN_INSTALL="$HOME/.bun"
-        export JAVA_HOME="$(${pkgs.jdk}/bin/java -XshowSettings:properties -version 2>&1 | awk '/java.home/{print $3}')"
 
-        export PATH="$JAVA_HOME/bin:$PATH"
         export PATH="$BUN_INSTALL/bin:$PATH"
         export PATH="/Library/Frameworks/Python.framework/Versions/3.13/bin:$PATH"
         export PATH=$PATH:$ANDROID_HOME/emulator

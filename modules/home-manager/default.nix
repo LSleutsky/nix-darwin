@@ -31,6 +31,7 @@
       awscli2
       cmatrix
       codecrafters-cli
+      coreutils
       curl
       duf
       fastfetch
@@ -42,10 +43,9 @@
       google-cloud-sdk
       hugo
       imagemagick
-      jdk
+      jdk24
       jq
       jpegoptim
-      jre
       lolcat
       mousecape
       nano
