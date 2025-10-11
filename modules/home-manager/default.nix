@@ -11,7 +11,6 @@
     ./dotfiles/zprofile.nix
     ./packages/bat.nix
     ./packages/btop.nix
-    ./packages/command-not-found.nix
     ./packages/eza.nix
     ./packages/fzf.nix
     ./packages/git.nix
