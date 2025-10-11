@@ -43,7 +43,6 @@
       google-cloud-sdk
       hugo
       imagemagick
-      jdk24
       jq
       jpegoptim
       lolcat
