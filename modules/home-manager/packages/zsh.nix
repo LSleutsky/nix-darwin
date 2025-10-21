@@ -134,8 +134,10 @@
         export PATH="/Library/Frameworks/Python.framework/Versions/3.13/bin:$PATH"
         export PATH=$PATH:$ANDROID_HOME/emulator
         export PATH=$PATH:$ANDROID_HOME/platform-tools
+        export PATH=$PATH:$HOME/go/bin
 
         export NVM_DIR="$HOME/.config/nvm"
+
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
         [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
       '')
