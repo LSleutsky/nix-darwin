@@ -19,7 +19,6 @@
       "luarocks"
       "mas"
       "maven"
-      "postgresql@17"
       "tty-clock"
       "watchman"
       "webp"

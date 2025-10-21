@@ -37,6 +37,7 @@
       fd
       figlet
       fortune
+      go
       glow
       google-chrome
       google-cloud-sdk
@@ -57,6 +58,7 @@
       pandoc
       pipes-rs
       pngquant
+      postgresql
       scc
       supabase-cli
       tealdeer

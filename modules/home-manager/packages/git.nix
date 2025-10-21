@@ -2,6 +2,16 @@
 
 {
   programs = {
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
+      options = {
+        commit-decoration-style = "bold box ul #450eff";
+        file-decoration-style = "#606018 ul";
+        line-numbers = true;
+        side-by-side = true;
+      };
+    };
     gh = {
       enable = true;
 	    settings = {
@@ -18,15 +28,6 @@
     git = {
       enable = true;
       package = pkgs.git;
-      delta = {
-        enable = true;
-        options = {
-          commit-decoration-style = "bold box ul #450eff";
-          file-decoration-style = "#606018 ul";
-          line-numbers = true;
-          side-by-side = true;
-        };
-      };
       ignores = [
         ".DS_Store"
         "*.log"
@@ -36,7 +37,7 @@
         "Thumbs.db"
         ".yarn"
       ];
-      extraConfig = {
+      settings = {
         init = {
           defaultBranch = "main";
         };
@@ -49,9 +50,11 @@
         safe = {
           directory = "$HOME/.local/share/nvim/lazy/*";
         };
+        user = {
+          email = "LushSleutsky@gmail.com";
+          name = "LSleutsky";
+        };
       };
-      userEmail = "LushSleutsky@gmail.com";
-      userName = "LSleutsky";
     };
   };
 }
