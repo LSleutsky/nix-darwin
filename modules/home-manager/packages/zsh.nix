@@ -131,7 +131,7 @@
         export BUN_INSTALL="$HOME/.bun"
 
         export PATH="$BUN_INSTALL/bin:$PATH"
-        export PATH="/Library/Frameworks/Python.framework/Versions/3.13/bin:$PATH"
+        export PATH="/Library/Frameworks/Python.framework/Versions/3.14/bin:$PATH"
         export PATH=$PATH:$ANDROID_HOME/emulator
         export PATH=$PATH:$ANDROID_HOME/platform-tools
         export PATH=$PATH:$HOME/go/bin
