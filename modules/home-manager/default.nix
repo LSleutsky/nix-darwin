@@ -63,6 +63,7 @@
       supabase-cli
       tealdeer
       tree
+      watchman
       weather
       yamllint
       zk

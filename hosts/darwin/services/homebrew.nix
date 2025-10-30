@@ -20,7 +20,6 @@
       "mas"
       "maven"
       "tty-clock"
-      "watchman"
       "webp"
     ];
     casks = [
