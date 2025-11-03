@@ -46,9 +46,6 @@
       "tailscale-app"
       "visual-studio-code"
     ];
-    taps = [
-      "homebrew/cask"
-    ]; 
 		masApps = {
 			"Amphetamine" = 937984704;
 			"myPoint Light S" = 518658487;

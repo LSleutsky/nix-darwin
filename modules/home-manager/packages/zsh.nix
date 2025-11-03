@@ -89,7 +89,7 @@
       nz = "nvim $HOME/.config/nix-darwin/modules/home-manager/packages/zsh.nix";
       pipes = "pipes-rs";
       rd = "rm -rf .DS_Store";
-      rebuild = "sudo nix flake update && sudo darwin-rebuild switch --flake .";
+      rebuild = "sudo -H env HOME=/var/root nix flake update --flake /Users/lush/.config/nix-darwin && sudo -H env HOME=/var/root darwin-rebuild switch --flake /Users/lush/.config/nix-darwin";
       n = "nvim";
       sn = "sudo -Es nvim";
       tree = "tree -a -C -I '.git' -I 'node_modules'";

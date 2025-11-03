@@ -60,12 +60,6 @@
 						nix-homebrew = {
 							enable = true;
 							user = "${user}";
-							taps = {
-								"homebrew/homebrew-bundle" = homebrew-bundle;
-								"homebrew/homebrew-core" = homebrew-core;
-								"homebrew/homebrew-cask" = homebrew-cask;
-							};
-							mutableTaps = false;
 							autoMigrate = true;
 						};
 					}
