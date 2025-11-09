@@ -47,6 +47,7 @@
       clock = "tty-clock -bcsC4 -f %a,\\ %d\\ %b\\ %Y";
       cls = "clear && clear";
       cbonsai = "cbonsai --live --infinite";
+      iplist = "iface=$(route get default 2>/dev/null | awk '/interface:/{print $2}')\; echo \"interface=$iface\"; sudo arp-scan --interface=\"$iface\" --localnet";
       dir = "tree -ad -C -I '.git' -I 'node_modules'";
       df = "df -h";
       free = "free -mth";
