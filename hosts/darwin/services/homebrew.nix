@@ -13,6 +13,7 @@
 			upgrade = true;
 		};
     brews = [
+      "arp-scan"
       "cbonsai"
       "docker-compose"
       "lua"
