@@ -53,6 +53,7 @@
       neofetch
       neovim
       ngrok
+      nmap
       onefetch
       optipng
       pandoc
