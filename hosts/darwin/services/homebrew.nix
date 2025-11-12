@@ -50,7 +50,6 @@
 		masApps = {
 			"Amphetamine" = 937984704;
 			"myPoint Light S" = 518658487;
-      "Slack for Desktop" = 803453959;
       "Xcode" = 497799835;
 		};
   };
