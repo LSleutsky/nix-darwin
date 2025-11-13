@@ -66,10 +66,11 @@
       gd = "git diff";
       gdf = "git diff ':!flake.lock'";
       gdn = "git diff --name-only";
-      gfp = "git fetch --all --prune && git pull --rebase origin $(git symbolic-ref --short HEAD)";
+      gfp = "git fetch --all --prune";
       ggf = "git push --force origin $(git symbolic-ref --short HEAD)";
       ggp = "git push origin $(git symbolic-ref --short HEAD)";
       gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+      gp = "git push";
       gpp = "git pull --rebase origin $(git symbolic-ref --short HEAD) && git push origin $(git symbolic-ref --short HEAD)";
       grb = "git rebase";
       grba = "git rebase --abort";
