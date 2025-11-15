@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, inputs, lib, pkgs, ... }:
 
 {
   imports = [
@@ -72,6 +72,8 @@
       (ripgrep-all.overrideAttrs (old: {
         doInstallCheck = false;
       }))
+
+      inputs.gitfetch.packages.${pkgs.system}.default
     ];
   };
 

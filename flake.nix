@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 		nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+		gitfetch.url = "github:Matars/gitfetch";
 
 		darwin = {
 			url = "github:LnL7/nix-darwin/master";
@@ -69,6 +70,23 @@
 						home-manager.useGlobalPkgs = true;
 						home-manager.useUserPackages = true;
 						home-manager.users.${user} = import ./modules/home-manager;
+					}
+					{
+						nixpkgs.overlays = [
+							(final: prev: {
+								fish = prev.fish.overrideAttrs (_: {
+									doCheck = false;
+								});
+								buildEnv = args:
+									let
+										args' =
+											if builtins.hasAttr "pathsToLink" args && builtins.isString args.pathsToLink
+											then args // { pathsToLink = [ args.pathsToLink ]; }
+											else args;
+									in
+										prev.buildEnv args';
+							})
+						];
 					}
 					./hosts/darwin
 				];
