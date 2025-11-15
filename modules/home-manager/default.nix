@@ -76,18 +76,14 @@
       (pkgs.python3Packages.buildPythonApplication {
         pname = "gitfetch-fixed";
         version = "1.3.2";
-
         src = inputs.gitfetch;
-
         format = "pyproject";
 
-        # Required for building pyproject packages using setuptools backend
         nativeBuildInputs = [
           pkgs.python3Packages.setuptools
           pkgs.python3Packages.wheel
         ];
 
-        # Actual gitfetch runtime dependencies
         propagatedBuildInputs = [
           pkgs.python3Packages.webcolors
           pkgs.python3Packages.requests
