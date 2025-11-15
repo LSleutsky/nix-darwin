@@ -75,7 +75,7 @@
 
       (pkgs.python3Packages.buildPythonApplication {
         pname = "gitfetch-fixed";
-        version = "1.3.2";
+        version = inputs.gitfetch.shortRev or "latest";
         src = inputs.gitfetch;
         format = "pyproject";
 
