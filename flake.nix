@@ -77,6 +77,7 @@
 								fish = prev.fish.overrideAttrs (_: {
 									doCheck = false;
 								});
+
 								buildEnv = args:
 									let
 										args' =
@@ -85,6 +86,12 @@
 											else args;
 									in
 										prev.buildEnv args';
+
+								gitfetch = prev.gitfetch.overridePythonAttrs (old: {
+									propagatedBuildInputs = (old.propagatedBuildInputs or []) ++ [
+										prev.python3Packages.webcolors
+									];
+								});
 							})
 						];
 					}
