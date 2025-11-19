@@ -27,7 +27,7 @@
           {
             "type": "os",
             "key": "  󰣇 OS",
-            "format": "{2}",
+            "format": "{name} {version}",
             "keyColor": "red"
           },
           {
