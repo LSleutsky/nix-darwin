@@ -21,7 +21,7 @@
           {
             "type": "chassis",
             "key": "  󰇺 Chassis",
-            "format": "{2}",
+            "format": "{type} | {vendor} | {version}",
             "keyColor": "red"
           },
           {
