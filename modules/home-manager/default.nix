@@ -61,6 +61,7 @@
       pipes-rs
       pngquant
       postgresql
+      rustup
       scc
       supabase-cli
       tealdeer
