@@ -22,7 +22,7 @@
   ];
 
   home = {
-    stateVersion = "24.11";
+    stateVersion = "26.05";
     packages = with pkgs; [
       _1password-cli
       asciinema
