@@ -40,6 +40,7 @@
       "notunes"
       "obsidian"
       "openmtp"
+      "pdf-expert"
       "postman"
       "postman-cli"
       "spotify"
