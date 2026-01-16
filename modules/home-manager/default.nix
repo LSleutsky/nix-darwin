@@ -65,6 +65,7 @@
       scc
       supabase-cli
       tealdeer
+      tmux
       tree
       watchman
       weather
