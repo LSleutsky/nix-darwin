@@ -71,17 +71,16 @@
       ggp = "git push origin $(git symbolic-ref --short HEAD)";
       gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
       gp = "git push";
-      gpp = "git pull --rebase origin $(git symbolic-ref --short HEAD) && git push origin $(git symbolic-ref --short HEAD)";
       grb = "git rebase";
       grba = "git rebase --abort";
       grbc = "git rebase --continue";
+      grd = "git reset --hard origin/$(git_develop_branch)";
+      grm = "git reset --hard origin/$(git_main_branch)";
       gsb = "git status -sb";
       grep = "grep --color=auto";
-      gc = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d";
       history = "history -i";
       ip = "ipconfig getifaddr en0";
       ipv6 = "ifconfig | grep 'inet6' | grep -E -v '(fe80|fd69|::1)'";
-      j = "__zoxide_z";
       man = "batman";
       mkdir = "mkdir -p";
       nb = "nvim $HOME/.config/nix-darwin/hosts/darwin/services/homebrew.nix";
@@ -89,6 +88,7 @@
       nf = "nvim $HOME/.config/nix-darwin/flake.nix";
       nh = "nvim $HOME/.config/nix-darwin/modules/home-manager/default.nix";
       nz = "nvim $HOME/.config/nix-darwin/modules/home-manager/packages/zsh.nix";
+      ngc = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d";
       pipes = "pipes-rs";
       rd = "rm -rf .DS_Store";
       rebuild = "sudo -H env HOME=/var/root nix flake update --flake /Users/lush/.config/nix-darwin && sudo -H env HOME=/var/root darwin-rebuild switch --flake /Users/lush/.config/nix-darwin";
