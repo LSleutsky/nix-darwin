@@ -7,6 +7,7 @@
     ./dotfiles/ignore.nix
     ./dotfiles/nanorc.nix
     ./dotfiles/neofetch.nix
+    ./dotfiles/tmux.nix
     ./dotfiles/vimrc.nix
     ./dotfiles/zprofile.nix
     ./packages/bat.nix
