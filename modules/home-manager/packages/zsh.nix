@@ -96,7 +96,6 @@
       n = "nvim";
       sn = "sudo -Es nvim";
       tree = "tree -a -C -I '.git' -I 'node_modules'";
-      update = "sudo /usr/local/bin/update-darwin.sh";
     };
     initContent = lib.mkMerge [
       (lib.mkBefore ''
