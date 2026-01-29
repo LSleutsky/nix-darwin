@@ -1,5 +1,39 @@
 { config, lib, pkgs, ... }:
 
+let
+  update-darwin = pkgs.writeShellScriptBin "update-darwin" ''
+    set -euo pipefail
+
+    USER_HOME="/Users/lush"
+    CONFIG_DIR="''${USER_HOME}/.config/nix-darwin"
+    ROOT_DIR="/var/root/nix-darwin-build"
+    DATE=$(date +%F)
+
+    sudo -u lush nix flake update --flake "$CONFIG_DIR"
+
+    sudo rm -rf "$ROOT_DIR"
+    sudo mkdir -p "$ROOT_DIR"
+    sudo cp -R "$CONFIG_DIR"/. "$ROOT_DIR"/
+    sudo chown -R root:wheel "$ROOT_DIR"
+
+    cd "$CONFIG_DIR"
+    COUNT=$(git log --since="''${DATE}T00:00" --until="''${DATE}T23:59" --oneline 2>/dev/null |
+      grep "build: config update ''${DATE}" | wc -l | tr -d ' ' || true)
+
+    if [ "$COUNT" -eq 0 ]; then
+      COMMIT_MSG="build: config update ''${DATE}"
+    else
+      VERSION=$((COUNT + 1))
+      COMMIT_MSG="build: config update ''${DATE} v''${VERSION}"
+    fi
+
+    sudo -H env HOME=/var/root darwin-rebuild switch --flake "$ROOT_DIR"
+
+    sudo -u lush git add --all
+    sudo -u lush git commit -m "$COMMIT_MSG" || echo "No changes to commit."
+    sudo -u lush git push
+  '';
+in
 {
   imports = [
     ./services/homebrew.nix
@@ -27,10 +61,11 @@
   environment = {
     darwinConfig = "$HOME/.config/nix-darwin/configuration.nix";
     shells = with pkgs; [bashInteractive zsh];
+    systemPackages = [ update-darwin ];
     variables = {
       EDITOR = "nvim";
-			NIXPKGS_ALLOW_BROKEN = "1";
-			NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM = "1";
+      NIXPKGS_ALLOW_BROKEN = "1";
+      NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM = "1";
       SUDO_EDITOR = "nvim";
       PAGER = "less";
     };
@@ -68,10 +103,10 @@
     defaults = {
       CustomUserPreferences = {
         NSGlobalDomain.WebKitDeveloperExtras = true;
-			  "com.apple.desktopservices" = {
-				  DSDontWriteNetworkStores = true;
-				  DSDontWriteUSBStores = true;
-			  };
+        "com.apple.desktopservices" = {
+          DSDontWriteNetworkStores = true;
+          DSDontWriteUSBStores = true;
+        };
         "com.apple.finder" = {
           ShowExternalHardDrivesOnDesktop = false;
           ShowHardDrivesOnDesktop = false;
@@ -84,7 +119,6 @@
           "Quit When Finished" = true;
         };
         "com.apple.security.authorization" = {
-          # for DisplayLink sudo auth prompt
           ignoreArd = true;
         };
         "com.apple.SoftwareUpdate" = {
@@ -99,7 +133,7 @@
       };
       NSGlobalDomain = {
         AppleShowAllExtensions = true;
-			  AppleShowAllFiles = true;
+        AppleShowAllFiles = true;
         AppleEnableSwipeNavigateWithScrolls = true;
         ApplePressAndHoldEnabled = false;
         AppleInterfaceStyle = "Dark";
@@ -119,18 +153,18 @@
       };
       finder = {
         AppleShowAllExtensions = true;
-			  ShowPathbar = true;
-			  ShowStatusBar = true;
+        ShowPathbar = true;
+        ShowStatusBar = true;
         _FXShowPosixPathInTitle = true;
       };
-		  loginwindow = {
-			  GuestEnabled = false;
-		  };
-		  trackpad = {
-			  Clicking = true;
-			  TrackpadRightClick = true;
-			  TrackpadThreeFingerDrag = true;
-		  };
+      loginwindow = {
+        GuestEnabled = false;
+      };
+      trackpad = {
+        Clicking = true;
+        TrackpadRightClick = true;
+        TrackpadThreeFingerDrag = true;
+      };
     };
     stateVersion = 4;
   };
