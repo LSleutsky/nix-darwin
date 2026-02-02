@@ -50,6 +50,7 @@
       iplist = "iface=$(route get default 2>/dev/null | awk '/interface:/{print $2}')\; echo \"interface=$iface\"; sudo arp-scan --interface=\"$iface\" --localnet";
       dir = "tree -ad -C -I '.git' -I 'node_modules'";
       df = "df -h";
+      ff = "fastfetch";
       free = "free -mth";
       gaa = "git add --all";
       gac = "git add --all && git commit -m";
