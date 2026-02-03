@@ -38,27 +38,6 @@
         "type": "github"
       }
     },
-    "flake-parts": {
-      "inputs": {
-        "nixpkgs-lib": [
-          "neovim-nightly-overlay",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1768135262,
-        "narHash": "sha256-PVvu7OqHBGWN16zSi6tEmPwwHQ4rLPU9Plvs8/1TUBY=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "80daad04eddbbf5a4d883996a73f3f542fa437ac",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "type": "github"
-      }
-    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -135,11 +114,11 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1769997151,
-        "narHash": "sha256-2vsex7HU0O7dBwPoE1kUoBkXtWwSlcJ/IRPIYK/Yheg=",
+        "lastModified": 1770087623,
+        "narHash": "sha256-9GrPh62iSNzxBgMIRr+qnomgHfFfcV6MvMqloNhokGg=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "e03fe364704302f57fdbfb3617d751298c3607a6",
+        "rev": "7517fc4111e21f4530ba5f7354530ae00c63ff9f",
         "type": "github"
       },
       "original": {
@@ -151,52 +130,16 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1769991421,
-        "narHash": "sha256-om0MTaiOTWMHtAPtfEHB6kJMuz7zZMOr3R6Y1oC6lNs=",
+        "lastModified": 1770084971,
+        "narHash": "sha256-Zt5K2vzVLANq8vPz9+vgsPQs+YjUQFOjEdnbBBljQFM=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "5506273e1497bff3137aaab2fc5819fc73a6dbf4",
+        "rev": "ee8e3f577e72408432be97002844e373cc7751b2",
         "type": "github"
       },
       "original": {
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "type": "github"
-      }
-    },
-    "neovim-nightly-overlay": {
-      "inputs": {
-        "flake-parts": "flake-parts",
-        "neovim-src": "neovim-src",
-        "nixpkgs": "nixpkgs_2"
-      },
-      "locked": {
-        "lastModified": 1769904653,
-        "narHash": "sha256-ZDVBonlM1KWDrgmiWQiUffHkxrlmb7ycA6c/BzZO2nw=",
-        "owner": "nix-community",
-        "repo": "neovim-nightly-overlay",
-        "rev": "ff53ef2634c6fe3af40c2ac893fd2e486e5fe353",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "neovim-nightly-overlay",
-        "type": "github"
-      }
-    },
-    "neovim-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1769867454,
-        "narHash": "sha256-lJWmcmmbUlzWNtIU7klxvBzTDzeAThcgoCPAqMn46o0=",
-        "owner": "neovim",
-        "repo": "neovim",
-        "rev": "270c7b46afabdb16a833f67747067b769901f269",
-        "type": "github"
-      },
-      "original": {
-        "owner": "neovim",
-        "repo": "neovim",
         "type": "github"
       }
     },
@@ -236,27 +179,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1769740369,
-        "narHash": "sha256-xKPyJoMoXfXpDM5DFDZDsi9PHArf2k5BJjvReYXoFpM=",
+        "lastModified": 1770015011,
+        "narHash": "sha256-7vUo0qWCl/rip+fzr6lcMlz9I0tN/8m7d5Bla/rS2kk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6308c3b21396534d8aaeac46179c14c439a89b8a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1769740369,
-        "narHash": "sha256-xKPyJoMoXfXpDM5DFDZDsi9PHArf2k5BJjvReYXoFpM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "6308c3b21396534d8aaeac46179c14c439a89b8a",
+        "rev": "f08e6b11a5ed43637a8ac444dd44118bc7d273b9",
         "type": "github"
       },
       "original": {
@@ -274,9 +201,8 @@
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
-        "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_2"
       }
     },
     "systems": {
