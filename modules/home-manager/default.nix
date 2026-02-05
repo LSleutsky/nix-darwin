@@ -41,7 +41,6 @@
       fortune
       go
       glow
-      google-chrome
       google-cloud-sdk
       hugo
       imagemagick

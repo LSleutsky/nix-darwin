@@ -34,6 +34,7 @@
       "evernote"
       "font-monaspace"
       "ghostty"
+      "google-chrome"
       "istat-menus"
       "iterm2@nightly"
       "logi-options+"
