@@ -15,7 +15,6 @@
     gh = {
       enable = true;
 	    settings = {
-		    browser = "firefox";
 		    editor = "nvim";
 		    git_protocol = "https";
 		    pager = "less";
