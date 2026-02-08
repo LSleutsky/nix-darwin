@@ -49,12 +49,23 @@
       odinsbeard = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         lib = nixpkgs.lib;
+        specialArgs = { inherit inputs; };
         modules = [
+          ({ pkgs, ... }: {
+            nix.package = pkgs.lix;
+            nix.settings = {
+              experimental-features = [ "nix-command" "flakes" ];
+              auto-optimise-store = true;
+            };
+          })
+          
           home-manager.darwinModules.home-manager
           nix-homebrew.darwinModules.nix-homebrew
+          
           ({ config, ... }: {
             system.primaryUser = user;
           })
+
           {
             nix-homebrew = {
               enable = true;
@@ -76,9 +87,9 @@
                   doCheck = false;
                 });
 
-								nushell = prev.nushell.overrideAttrs (_: {
-									doCheck = false;
-								});
+                nushell = prev.nushell.overrideAttrs (_: {
+                  doCheck = false;
+                });
 
                 buildEnv = args:
                   let

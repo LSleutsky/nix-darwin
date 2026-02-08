@@ -17,6 +17,7 @@ let
     sudo chown -R root:wheel "$ROOT_DIR"
 
     cd "$CONFIG_DIR"
+    
     COUNT=$(git log --since="''${DATE}T00:00" --until="''${DATE}T23:59" --oneline 2>/dev/null |
       grep "build: config update ''${DATE}" | wc -l | tr -d ' ' || true)
 
