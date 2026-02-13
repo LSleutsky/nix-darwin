@@ -143,6 +143,10 @@
 
         export NVM_DIR="$HOME/.config/nvm"
 
+        export HISTFILESIZE=100000
+        export HISTSIZE=100000
+        export SAVEHIST=100000
+
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
         [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
       '')
@@ -186,6 +190,10 @@
           else
             zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
           fi
+        fi
+
+        if [[ -n "$TMUX" ]]; then
+          unset HISTFILE
         fi
 
         unset CASE_SENSITIVE HYPHEN_INSENSITIVE
