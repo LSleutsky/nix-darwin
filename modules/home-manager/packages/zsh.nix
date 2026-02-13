@@ -72,6 +72,7 @@
       ggp = "git push origin $(git symbolic-ref --short HEAD)";
       gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
       gp = "git push";
+      gpfl = "git push --force-with-lease";
       grb = "git rebase";
       grba = "git rebase --abort";
       grbc = "git rebase --continue";
