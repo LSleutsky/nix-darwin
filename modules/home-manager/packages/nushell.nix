@@ -66,6 +66,10 @@
       })
     '';
     extraEnv = ''
+      $env.PROMPT_INDICATOR = ""
+      $env.PROMPT_INDICATOR_VI_INSERT = ""
+      $env.PROMPT_INDICATOR_VI_NORMAL = ""
+
       $env.ANDROID_HOME = $"($env.HOME)/Library/Android/sdk"
       $env.BUN_INSTALL = $"($env.HOME)/.bun"
       $env.NVM_DIR = $"($env.HOME)/.config/nvm"
