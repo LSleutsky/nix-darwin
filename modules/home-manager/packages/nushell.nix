@@ -3,16 +3,19 @@
 {
   programs.nushell = {
     enable = true;
-
     extraConfig = ''
-      $env.config = {
+      $env.config = ($env.config | merge {
         show_banner: false
+        highlight_resolved_externals: true
+        edit_mode: emacs
+
         history: {
           max_size: 20000
           sync_on_enter: true
           file_format: "sqlite"
           isolation: false
         }
+
         completions: {
           case_sensitive: false
           quick: true
@@ -24,46 +27,31 @@
             completer: null
           }
         }
-        highlight_resolved_externals: true
+
         keybindings: [
           {
             name: history_search_up
             modifier: control
             keycode: char_k
-            mode: [emacs, vi_normal, vi_insert]
+            mode: [emacs vi_normal vi_insert]
             event: { send: up }
           }
           {
             name: history_search_down
             modifier: control
             keycode: char_j
-            mode: [emacs, vi_normal, vi_insert]
+            mode: [emacs vi_normal vi_insert]
             event: { send: down }
-          }
-          {
-            name: forward_word
-            modifier: control
-            keycode: right
-            mode: [emacs, vi_normal, vi_insert]
-            event: { edit: movewordright }
-          }
-          {
-            name: backward_word
-            modifier: control
-            keycode: left
-            mode: [emacs, vi_normal, vi_insert]
-            event: { edit: movewordleft }
           }
           {
             name: backward_kill_word
             modifier: control
             keycode: char_w
-            mode: [emacs, vi_insert]
+            mode: [emacs vi_insert]
             event: { edit: backspaceword }
           }
         ]
-        edit_mode: vim
-      }
+      })
     '';
     extraEnv = ''
       $env.ANDROID_HOME = $"($env.HOME)/Library/Android/sdk"
