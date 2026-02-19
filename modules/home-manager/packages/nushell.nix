@@ -16,7 +16,7 @@
       $env.config = ($env.config | merge {
         show_banner: false
         highlight_resolved_externals: true
-        edit_mode: vim
+        edit_mode: vi
         color_config: {
           shape_external: red
           shape_external_resolved: green
