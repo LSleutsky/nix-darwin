@@ -61,7 +61,7 @@ in
 
   environment = {
     darwinConfig = "$HOME/.config/nix-darwin/configuration.nix";
-    shells = with pkgs; [bashInteractive zsh];
+    shells = with pkgs; [bashInteractive zsh nushell];
     systemPackages = [ update-darwin ];
     variables = {
       EDITOR = "nvim";
@@ -86,7 +86,7 @@ in
   users.users.lush = {
     description = "Lush Sleutsky";
     home = "/Users/lush";
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
 
   fonts = {
