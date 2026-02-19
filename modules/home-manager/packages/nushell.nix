@@ -74,6 +74,10 @@
       $env.BUN_INSTALL = $"($env.HOME)/.bun"
       $env.NVM_DIR = $"($env.HOME)/.config/nvm"
       $env.PATH = ($env.PATH | split row (char esep)
+        | prepend "/etc/profiles/per-user/lush/bin"
+        | prepend "/run/current-system/sw/bin"
+        | prepend "/nix/var/nix/profiles/default/bin"
+        | prepend $"($env.HOME)/.nix-profile/bin"
         | prepend $"($env.HOME)/.bun/bin"
         | prepend "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         | append $"($env.ANDROID_HOME)/emulator"

@@ -102,5 +102,11 @@
     ];
   };
 
+  home.file."Library/Application Support/nushell/config.nu".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nushell/config.nu";
+
+  home.file."Library/Application Support/nushell/env.nu".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nushell/env.nu";
+
   xdg.enable = true;
 }
