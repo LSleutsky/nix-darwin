@@ -4,6 +4,7 @@
   programs.starship = {
     enable = true;
     enableBashIntegration = true;
+    enableNushellIntegration = true;
     enableZshIntegration = true;
     settings = {
       format = "$directory$git_branch$git_status$docker_context$character";
