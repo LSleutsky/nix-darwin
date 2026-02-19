@@ -56,7 +56,7 @@
             "type": "shell",
             "key": "   Shell",
             "keyColor": "yellow",
-            "format": "{1} ({2})"
+            "format": "{1}"
           },
           {
             "type": "custom",
