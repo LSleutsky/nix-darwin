@@ -1,15 +1,30 @@
 { config, lib, pkgs, ... }:
-
 {
   programs.nushell = {
     enable = true;
     extraConfig = ''
+      def gac [message: string] {
+        git add --all
+        git commit -m $message
+      }
+
+      def ngc [] {
+        nix-collect-garbage --delete-old
+        sudo nix-collect-garbage -d
+      }
+
       $env.config = ($env.config | merge {
         show_banner: false
         highlight_resolved_externals: true
-        edit_mode: emacs
+        edit_mode: vim
+        color_config: {
+          shape_external: red
+          shape_external_resolved: green
+          shape_internalcall: cyan
+          shape_garbage: { fg: red attr: b }
+        }
         history: {
-          max_size: 20000
+          max_size: 100000
           sync_on_enter: true
           file_format: "sqlite"
           isolation: false
@@ -67,7 +82,6 @@
       df = "df -h";
       ff = "fastfetch";
       gaa = "git add --all";
-      gac = "git add --all; git commit -m";
       gcb = "git checkout -b";
       gcm = "git commit -m";
       gco = "git checkout";
@@ -85,7 +99,6 @@
       nf = "nvim ~/.config/nix-darwin/flake.nix";
       nh = "nvim ~/.config/nix-darwin/modules/home-manager/default.nix";
       nz = "nvim ~/.config/nix-darwin/modules/home-manager/packages/zsh.nix";
-      ngc = "nix-collect-garbage --delete-old; sudo nix-collect-garbage -d";
       rd = "rm -rf .DS_Store";
       tree = "tree -a -C -I '.git' -I 'node_modules'";
       dir = "tree -ad -C -I '.git' -I 'node_modules'";
