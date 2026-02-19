@@ -90,6 +90,10 @@ in
     shell = pkgs.nushell;
   };
 
+  launchd.user.envVariables = {
+    XDG_CONFIG_HOME = "/Users/lush/.config";
+  };
+
   fonts = {
     packages = with pkgs; [
       nerd-fonts.comic-shanns-mono
