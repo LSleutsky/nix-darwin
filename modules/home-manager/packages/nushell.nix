@@ -84,8 +84,8 @@
         | append $"($env.HOME)/go/bin"
       )
 
-      fnm env --shell nushell | lines | str join "\n" | save -f /tmp/fnm-env.nu
-      source /tmp/fnm-env.nu
+      load-env (fnm env --json | from json)
+      $env.PATH = ($env.PATH | prepend $env.FNM_MULTISHELL_PATH)
     '';
     shellAliases = {
       cls = "clear";
