@@ -72,7 +72,6 @@
       $env.PROMPT_INDICATOR_VI_NORMAL = ""
       $env.ANDROID_HOME = $"($env.HOME)/Library/Android/sdk"
       $env.BUN_INSTALL = $"($env.HOME)/.bun"
-      $env.NVM_DIR = $"($env.HOME)/.config/nvm"
       $env.PATH = ($env.PATH | split row (char esep)
         | prepend "/etc/profiles/per-user/lush/bin"
         | prepend "/run/current-system/sw/bin"
@@ -84,6 +83,9 @@
         | append $"($env.ANDROID_HOME)/platform-tools"
         | append $"($env.HOME)/go/bin"
       )
+
+      fnm env --shell nushell | lines | str join "\n" | save -f /tmp/fnm-env.nu
+      source /tmp/fnm-env.nu
     '';
     shellAliases = {
       cls = "clear";
