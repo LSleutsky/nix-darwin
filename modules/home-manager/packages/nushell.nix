@@ -8,14 +8,12 @@
         show_banner: false
         highlight_resolved_externals: true
         edit_mode: emacs
-
         history: {
           max_size: 20000
           sync_on_enter: true
           file_format: "sqlite"
           isolation: false
         }
-
         completions: {
           case_sensitive: false
           quick: true
@@ -27,7 +25,6 @@
             completer: null
           }
         }
-
         keybindings: [
           {
             name: history_search_up
@@ -57,7 +54,6 @@
       $env.ANDROID_HOME = $"($env.HOME)/Library/Android/sdk"
       $env.BUN_INSTALL = $"($env.HOME)/.bun"
       $env.NVM_DIR = $"($env.HOME)/.config/nvm"
-
       $env.PATH = ($env.PATH | split row (char esep)
         | prepend $"($env.HOME)/.bun/bin"
         | prepend "/Library/Frameworks/Python.framework/Versions/3.14/bin"
@@ -82,7 +78,6 @@
       gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
       gsb = "git status -sb";
       grep = "grep --color=auto";
-      mkdir = "mkdir -p";
       n = "nvim";
       sn = "sudo -Es nvim";
       nb = "nvim $HOME/.config/nix-darwin/hosts/darwin/services/homebrew.nix";
