@@ -85,7 +85,7 @@
       )
 
       load-env (fnm env --json | from json)
-      $env.PATH = ($env.PATH | prepend $env.FNM_MULTISHELL_PATH)
+      $env.PATH = ($env.PATH | prepend $"($env.FNM_MULTISHELL_PATH)/bin")
     '';
     shellAliases = {
       cls = "clear";
