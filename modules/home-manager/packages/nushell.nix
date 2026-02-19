@@ -80,11 +80,11 @@
       grep = "grep --color=auto";
       n = "nvim";
       sn = "sudo -Es nvim";
-      nb = "nvim $HOME/.config/nix-darwin/hosts/darwin/services/homebrew.nix";
-      nd = "nvim $HOME/.config/nix-darwin/hosts/darwin/default.nix";
-      nf = "nvim $HOME/.config/nix-darwin/flake.nix";
-      nh = "nvim $HOME/.config/nix-darwin/modules/home-manager/default.nix";
-      nz = "nvim $HOME/.config/nix-darwin/modules/home-manager/packages/zsh.nix";
+      nb = "nvim ~/.config/nix-darwin/hosts/darwin/services/homebrew.nix";
+      nd = "nvim ~/.config/nix-darwin/hosts/darwin/default.nix";
+      nf = "nvim ~/.config/nix-darwin/flake.nix";
+      nh = "nvim ~/.config/nix-darwin/modules/home-manager/default.nix";
+      nz = "nvim ~/.config/nix-darwin/modules/home-manager/packages/zsh.nix";
       ngc = "nix-collect-garbage --delete-old; sudo nix-collect-garbage -d";
       rd = "rm -rf .DS_Store";
       tree = "tree -a -C -I '.git' -I 'node_modules'";
