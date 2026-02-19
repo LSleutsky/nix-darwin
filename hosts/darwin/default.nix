@@ -69,6 +69,7 @@ in
       NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM = "1";
       SUDO_EDITOR = "nvim";
       PAGER = "less";
+      XDG_CONFIG_HOME = "$HOME/.config";
     };
   };
 
