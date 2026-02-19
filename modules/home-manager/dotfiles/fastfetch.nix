@@ -53,10 +53,10 @@
             "keyColor": "yellow"
           },
           {
-            "type": "wm",
-            "key": "  󱗃 WM",
-            "format": "{2}",
-            "keyColor": "yellow"
+            "type": "shell",
+            "key": "   Shell",
+            "keyColor": "yellow",
+            "format": "{1} ({2})"
           },
           {
             "type": "custom",
