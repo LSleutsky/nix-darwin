@@ -63,6 +63,24 @@
             mode: [emacs vi_insert]
             event: { edit: backspaceword }
           }
+          {
+            name: clear_line
+            modifier: control
+            keycode: char_u
+            mode: [emacs vi_normal vi_insert]
+            event: [
+              { edit: cutfromstart }
+            ]
+          }
+          {
+            name: backward_kill_word
+            modifier: control
+            keycode: char_w
+            mode: [emacs vi_insert]
+            event: [
+              { edit: cutwordleft }
+            ]
+          }
         ]
       })
     '';
