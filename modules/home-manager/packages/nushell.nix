@@ -52,18 +52,25 @@
         }
         keybindings: [
           {
-            name: history_search_up
+            name: move_word_left
+            modifier: alt
+            keycode: left
+            mode: [emacs vi_normal vi_insert]
+            event: { edit: movewordleft }
+          }
+          {
+            name: move_word_right
+            modifier: alt
+            keycode: right
+            mode: [emacs vi_normal vi_insert]
+            event: { edit: movewordright }
+          }
+          {
+            name: kill_to_end
             modifier: control
             keycode: char_k
             mode: [emacs vi_normal vi_insert]
-            event: { send: up }
-          }
-          {
-            name: history_search_down
-            modifier: control
-            keycode: char_j
-            mode: [emacs vi_normal vi_insert]
-            event: { send: down }
+            event: { edit: cuttoend }
           }
           {
             name: backward_kill_word
