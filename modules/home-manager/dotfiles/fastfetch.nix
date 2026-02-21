@@ -22,10 +22,6 @@
               "type": "kernel"
           },
           {
-            "key": "│ {#36} wm      {#keys}│",
-            "type": "wm",
-          },
-          {
             "key": "│ {#36}󰇄 desktop {#keys}│",
             "type": "de"
           },
@@ -40,7 +36,7 @@
           {
             "key": "│ {#33}󰍛 cpu     {#keys}│",
             "type": "cpu",
-            "showPeCoreCount": true,
+            "format": "{1} @ {7}"
           },
           {
             "type": "gpu",
