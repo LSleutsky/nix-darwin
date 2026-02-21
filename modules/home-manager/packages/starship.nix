@@ -89,6 +89,17 @@
           "node_modules"
         ];
       };
+      rust = {
+        format = " [$symbol($version )]($style)";
+        symbol = " ";
+        style = "red bold";
+        detect_files = [
+          "Cargo.toml"
+        ];
+        detect_extensions = [
+          "rs"
+        ];
+      };
     };
   };
 }
