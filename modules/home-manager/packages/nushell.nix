@@ -9,6 +9,12 @@
         git commit -m $message
       }
 
+      def iplist [] {
+        let iface = (route get default | lines | where $it =~ "interface:" | first | split column ":" | get column2 | first | str trim)
+        print $"interface=($iface)"
+        sudo arp-scan $"--interface=($iface)" --localnet
+      }
+
       def ngc [] {
         nix-collect-garbage --delete-old
         sudo nix-collect-garbage -d
