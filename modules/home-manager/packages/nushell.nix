@@ -131,6 +131,7 @@
       gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
       gsb = "git status -sb";
       grep = "grep --color=auto";
+      ls = "ls -a";
       man = "batman";
       n = "nvim";
       sn = "sudo -Es nvim";

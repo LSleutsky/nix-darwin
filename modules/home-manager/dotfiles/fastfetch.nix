@@ -6,7 +6,7 @@
         "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
         "display": {
           "separator": " ",
-          "keyColor": "white
+          "keyColor": "white"
         },
         "modules": [
           {
