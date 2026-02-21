@@ -5,11 +5,12 @@
       {
         "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
         "display": {
-          "separator": " "
+          "separator": " ",
+          "keyColor": "white
         },
         "modules": [
           {
-            "key": "{#white}╭───────────╮{#}",
+            "key": "╭───────────╮",
             "type": "custom"
           },
           {
@@ -58,7 +59,7 @@
             "type": "uptime"
           },
           {
-            "key": "{#white}├───────────┤{#}",
+            "key": "├───────────┤",
             "type": "custom"
           },
           {
@@ -67,7 +68,7 @@
             "symbol": "circle"
           },
           {
-            "key": "{#white}╰───────────╯{#}",
+            "key": "╰───────────╯",
             "type": "custom"
           }
         ]
