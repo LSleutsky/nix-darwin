@@ -125,6 +125,7 @@
       gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
       gsb = "git status -sb";
       grep = "grep --color=auto";
+      man = "batman";
       n = "nvim";
       sn = "sudo -Es nvim";
       nb = "nvim ~/.config/nix-darwin/hosts/darwin/services/homebrew.nix";
