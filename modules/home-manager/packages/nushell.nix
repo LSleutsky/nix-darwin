@@ -12,7 +12,7 @@
       def iplist [] {
         let iface = (route get default | lines | where $it =~ "interface:" | first | str replace "interface:" "" | str trim)
         print $"interface=($iface)"
-        sudo arp-scan $"--interface=($iface)" --localnet
+        sudo /opt/homebrew/bin/arp-scan $"--interface=($iface)" --localnet
       }
 
       def ngc [] {
