@@ -14,7 +14,8 @@
           },
           {
             "key": "│ {#34}{icon} distro  {#keys}│",
-            "type": "os"
+            "type": "os",
+            "format": "{name} {version}",
           },
           {
               "key": "│ {#35} kernel  {#keys}│",
