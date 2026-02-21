@@ -8,7 +8,7 @@
     enableZshIntegration = true;
     settings = {
       format = "$directory$git_branch$git_status$docker_context$character";
-      right_format = "$nodejs";
+      right_format = "$nodejs$rust";
       add_newline = true;
       command_timeout = 2500;
       character = {
