@@ -14,6 +14,15 @@
         sudo nix-collect-garbage -d
       }
 
+      # dir hashes
+      def --env cfg [] { cd ~/.config }
+      def --env dl [] { cd ~/Downloads }
+      def --env docs [] { cd ~/Documents }
+      def --env nx [] { cd ~/.config/nix-darwin }
+      def --env pics [] { cd ~/Pictures }
+      def --env repos [] { cd ~/.local/share/repos }
+      def --env vids [] { cd ~/Videos }
+
       $env.config = ($env.config | merge {
         show_banner: false
         highlight_resolved_externals: true
