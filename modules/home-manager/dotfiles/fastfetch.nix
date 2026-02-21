@@ -18,8 +18,8 @@
             "format": "{name} {version}",
           },
           {
-              "key": "│ {#35} kernel  {#keys}│",
-              "type": "kernel"
+            "key": "│ {#35} kernel  {#keys}│",
+            "type": "kernel"
           },
           {
             "key": "│ {#36}󰇄 desktop {#keys}│",
