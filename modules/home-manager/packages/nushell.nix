@@ -14,7 +14,6 @@
         sudo nix-collect-garbage -d
       }
 
-      # dir hashes
       def --env cfg [] { cd ~/.config }
       def --env dl [] { cd ~/Downloads }
       def --env docs [] { cd ~/Documents }
@@ -54,14 +53,14 @@
           {
             name: move_word_left
             modifier: alt
-            keycode: left
+            keycode: char_b
             mode: [emacs vi_normal vi_insert]
             event: { edit: movewordleft }
           }
           {
             name: move_word_right
             modifier: alt
-            keycode: right
+            keycode: char_f
             mode: [emacs vi_normal vi_insert]
             event: { edit: movewordright }
           }
@@ -77,25 +76,14 @@
             modifier: control
             keycode: char_w
             mode: [emacs vi_insert]
-            event: { edit: backspaceword }
+            event: { edit: cutwordleft }
           }
           {
             name: clear_line
             modifier: control
             keycode: char_u
             mode: [emacs vi_normal vi_insert]
-            event: [
-              { edit: cutfromstart }
-            ]
-          }
-          {
-            name: backward_kill_word
-            modifier: control
-            keycode: char_w
-            mode: [emacs vi_insert]
-            event: [
-              { edit: cutwordleft }
-            ]
+            event: { edit: cutfromstart }
           }
         ]
       })
