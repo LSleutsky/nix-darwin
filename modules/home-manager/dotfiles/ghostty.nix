@@ -9,6 +9,11 @@
       window-save-state = always
       keybind = shift+enter=text:\n
       macos-option-as-alt = true
+      window-padding-x = 10
+      window-padding-y = 10
+      cursor-style = "block"
+      window-colorspace = "display-p3"
+      maximize = true
     '';
   };
 }
