@@ -128,6 +128,7 @@
       gdn = "git diff --name-only";
       gfp = "git fetch --all --prune";
       gp = "git push";
+      gpf = "git push --force-with-lease";
       gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
       gsb = "git status -sb";
       grep = "grep --color=auto";
