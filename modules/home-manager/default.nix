@@ -65,6 +65,7 @@
       postgresql
       rustup
       scc
+      scrcpy
       supabase-cli
       tealdeer
       tmux
