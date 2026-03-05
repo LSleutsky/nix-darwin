@@ -4,6 +4,10 @@
   programs.nushell = {
     enable = true;
     extraConfig = ''
+      def "alias" [name: string] {
+        scope aliases | where name == $name | get expansion | first
+      }
+
       def gac [message: string] {
         git add --all
         git commit -m $message
