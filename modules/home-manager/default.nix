@@ -6,7 +6,6 @@
     ./dotfiles/ghostty.nix
     ./dotfiles/ignore.nix
     ./dotfiles/nanorc.nix
-    ./dotfiles/neofetch.nix
     ./dotfiles/tmux.nix
     ./dotfiles/vimrc.nix
     ./dotfiles/zprofile.nix
@@ -53,7 +52,6 @@
       nano
       nanorc
       neo-cowsay
-      neofetch
       neovim
       ngrok
       nmap
