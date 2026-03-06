@@ -29,7 +29,6 @@
       asciinema
       asciiquarium
       awscli2
-      claude-code
       cloc
       cmatrix
       codecrafters-cli
