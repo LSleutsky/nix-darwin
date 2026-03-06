@@ -101,6 +101,7 @@
       $env.ANDROID_HOME = $"($env.HOME)/Library/Android/sdk"
       $env.BUN_INSTALL = $"($env.HOME)/.bun"
       $env.PATH = ($env.PATH | split row (char esep)
+        | prepend $"($env.HOME)/.local/bin"
         | prepend "/usr/local/bin"
         | prepend "/etc/profiles/per-user/lush/bin"
         | prepend "/run/current-system/sw/bin"
