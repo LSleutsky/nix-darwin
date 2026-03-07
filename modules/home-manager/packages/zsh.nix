@@ -192,10 +192,6 @@
           fi
         fi
 
-        if [[ -n "$TMUX" ]]; then
-          unset HISTFILE
-        fi
-
         unset CASE_SENSITIVE HYPHEN_INSENSITIVE
 
         bindkey -e
