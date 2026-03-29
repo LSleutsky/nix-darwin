@@ -47,9 +47,5 @@
       "tailscale-app"
       "visual-studio-code"
     ];
-		masApps = {
-			"Amphetamine" = 937984704;
-			"myPoint Light S" = 518658487;
-		};
   };
 }
