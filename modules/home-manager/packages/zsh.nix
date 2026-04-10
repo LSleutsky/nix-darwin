@@ -141,14 +141,9 @@
         export PATH=$PATH:$ANDROID_HOME/platform-tools
         export PATH=$PATH:$HOME/go/bin
 
-        export NVM_DIR="$HOME/.config/nvm"
-
         export HISTFILESIZE=100000
         export HISTSIZE=100000
         export SAVEHIST=100000
-
-        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
       '')
 
       (lib.mkOrder 550 ''
