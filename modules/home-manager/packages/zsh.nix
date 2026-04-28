@@ -205,7 +205,6 @@
 
         eval "$(/opt/homebrew/bin/brew shellenv)"
         eval "$(fnm env --use-on-cd --shell zsh)"
-        eval "$(op completion zsh)"; compdef _op op
       ''
     ];
   };
