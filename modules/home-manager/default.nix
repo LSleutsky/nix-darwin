@@ -38,6 +38,7 @@
       fastfetch
       fd
       figlet
+      fnm
       fortune
       go
       glow
