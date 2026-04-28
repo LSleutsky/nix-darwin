@@ -17,7 +17,6 @@
     ./packages/nushell.nix
     ./packages/ripgrep.nix
     ./packages/starship.nix
-    ./packages/watson.nix
     ./packages/zoxide.nix
     ./packages/zsh.nix
   ];
