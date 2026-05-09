@@ -140,6 +140,7 @@
         export PATH=$PATH:$ANDROID_HOME/emulator
         export PATH=$PATH:$ANDROID_HOME/platform-tools
         export PATH=$PATH:$HOME/go/bin
+        export PATH="$HOME/.local/bin:$PATH"
 
         export HISTFILESIZE=100000
         export HISTSIZE=100000

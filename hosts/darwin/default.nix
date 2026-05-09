@@ -28,7 +28,7 @@ let
       COMMIT_MSG="build: config update ''${DATE} v''${VERSION}"
     fi
 
-    sudo -H env HOME=/var/root darwin-rebuild switch --flake "$ROOT_DIR"
+    sudo -H env HOMEBREW_NO_INSTALL_FROM_API=1 HOME=/var/root darwin-rebuild switch --flake "$ROOT_DIR"
 
     sudo -u lush git add --all
     sudo -u lush git commit -m "$COMMIT_MSG" || echo "No changes to commit."
@@ -87,7 +87,7 @@ in
   users.users.lush = {
     description = "Lush Sleutsky";
     home = "/Users/lush";
-    shell = pkgs.nushell;
+    shell = pkgs.zsh;
   };
 
   fonts = {
