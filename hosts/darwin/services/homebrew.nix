@@ -2,7 +2,7 @@
 
 {
   homebrew = {
-    enable = false;
+    enable = true;
 		global = {
 			autoUpdate = false;
 			brewfile = false;

@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     gitfetch.url = "github:Matars/gitfetch";
 
     darwin = {
@@ -29,6 +28,14 @@
     homebrew-cask = {
       url = "github:homebrew/homebrew-cask";
       flake = false;
+    };
+
+    nix-homebrew = {
+      url = "github:zhaofengli-wip/nix-homebrew";
+      inputs.brew-src = {
+        url = "github:Homebrew/brew";
+        flake = false;
+      };
     };
   };
 
