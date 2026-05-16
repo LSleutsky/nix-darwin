@@ -60,6 +60,7 @@
       pipes-rs
       pngquant
       postgresql
+      raycast
       rustup
       scc
       scrcpy
