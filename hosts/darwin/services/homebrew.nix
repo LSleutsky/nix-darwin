@@ -24,8 +24,6 @@
       "webp"
     ];
     casks = [
-      "adobe-creative-cloud"
-      "alt-tab"
       "boom-3d"
       "calibre"
       "discord"
@@ -35,7 +33,6 @@
       "font-monaspace"
       "ghostty"
       "istat-menus"
-      "iterm2@nightly"
       "logi-options+"
       "notunes"
       "obsidian"
