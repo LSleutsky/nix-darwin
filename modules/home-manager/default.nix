@@ -68,7 +68,6 @@
       tealdeer
       tmux
       tree
-      watchman
       weather
       yamllint
       zk
