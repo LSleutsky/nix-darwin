@@ -20,6 +20,7 @@
       "luarocks"
       "mas"
       "maven"
+      "tree-sitter"
       "tty-clock"
       "webp"
     ];
