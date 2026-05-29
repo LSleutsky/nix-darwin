@@ -11,6 +11,7 @@
 			autoUpdate = true;
 			cleanup = "zap";
 			upgrade = true;
+			extraFlags = [ "--force" ];
 		};
     brews = [
       "arp-scan"
