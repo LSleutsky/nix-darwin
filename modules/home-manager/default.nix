@@ -64,6 +64,7 @@
       rustup
       scc
       scrcpy
+      serie
       supabase-cli
       tealdeer
       tmux
