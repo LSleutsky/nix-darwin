@@ -70,7 +70,8 @@
       gfp = "git fetch --all --prune";
       ggf = "git push --force origin $(git symbolic-ref --short HEAD)";
       ggp = "git push origin $(git symbolic-ref --short HEAD)";
-      gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+      # gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+      gl = "serie";
       gp = "git push";
       gpfl = "git push --force-with-lease";
       grb = "git rebase";

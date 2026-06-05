@@ -130,7 +130,8 @@
       gfp = "git fetch --all --prune";
       gp = "git push";
       gpf = "git push --force-with-lease";
-      gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+      # gl = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+      gl = "serie";
       gsb = "git status -sb";
       grep = "grep --color=auto";
       ls = "ls -a";
