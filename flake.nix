@@ -5,6 +5,11 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     gitfetch.url = "github:Matars/gitfetch";
 
+    rmatrix = {
+      url = "github:Fierthraix/rmatrix";
+      flake = false;
+    };
+
     darwin = {
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";

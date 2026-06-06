@@ -77,6 +77,13 @@
         doInstallCheck = false;
       }))
 
+      (rustPlatform.buildRustPackage {
+        pname = "rmatrix";
+        version = inputs.rmatrix.shortRev or "latest";
+        src = inputs.rmatrix;
+        cargoLock.lockFile = "${inputs.rmatrix}/Cargo.lock";
+      })
+
       (pkgs.python3Packages.buildPythonApplication {
         pname = "gitfetch-fixed";
         version = inputs.gitfetch.shortRev or "latest";
