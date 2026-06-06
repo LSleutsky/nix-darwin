@@ -28,6 +28,8 @@
       enable = true;
       package = pkgs.git;
       ignores = [
+        ".claude/"
+        ".direnv/"
         ".DS_Store"
         "*.log"
         "node_modules"
@@ -35,6 +37,8 @@
         "*.swp"
         "Thumbs.db"
         ".yarn"
+        "result"
+        "result-*"
       ];
       settings = {
         init = {
