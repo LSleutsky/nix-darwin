@@ -9,6 +9,7 @@
     ./dotfiles/tmux.nix
     ./dotfiles/vimrc.nix
     ./dotfiles/zprofile.nix
+    ./packages/atuin.nix
     ./packages/bat.nix
     ./packages/btop.nix
     ./packages/eza.nix
