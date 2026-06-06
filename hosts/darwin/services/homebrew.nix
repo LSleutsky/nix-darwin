@@ -32,6 +32,7 @@
       "docker-desktop"
       "dropbox@beta"
       "evernote"
+      "Fierthraix/tap/rmatrix"
       "font-monaspace"
       "ghostty"
       "istat-menus"
