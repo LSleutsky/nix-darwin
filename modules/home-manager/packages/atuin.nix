@@ -7,6 +7,8 @@
     enableZshIntegration = true;
     forceOverwriteSettings = true;
 
+    flags = [ "--disable-up-arrow" ];
+
     settings.theme.name = "tokyo-night";
 
     themes.tokyo-night = {
