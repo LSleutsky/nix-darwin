@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./dotfiles/atuin.nix
     ./dotfiles/fastfetch.nix
     ./dotfiles/ghostty.nix
     ./dotfiles/ignore.nix

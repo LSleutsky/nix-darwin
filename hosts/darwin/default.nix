@@ -28,11 +28,19 @@ let
       COMMIT_MSG="build: config update ''${DATE} v''${VERSION}"
     fi
 
-    sudo -H env HOMEBREW_NO_INSTALL_FROM_API=1 HOME=/var/root darwin-rebuild switch --flake "$ROOT_DIR"
+    rebuild_status=0
+    sudo -H env HOMEBREW_NO_INSTALL_FROM_API=1 HOME=/var/root darwin-rebuild switch --flake "$ROOT_DIR" || rebuild_status=$?
+    if [ "$rebuild_status" -ne 0 ]; then
+      echo "warning: darwin-rebuild exited ''${rebuild_status}; staging, committing, and pushing anyway." >&2
+    fi
 
     sudo -u lush git add --all
-    sudo -u lush git commit -m "$COMMIT_MSG" || echo "No changes to commit."
-    sudo -u lush git push
+    if sudo -u lush git diff --cached --quiet; then
+      echo "No changes to commit."
+    else
+      sudo -u lush git commit -m "$COMMIT_MSG"
+      sudo -u lush git push
+    fi
   '';
 in
 {
