@@ -51,7 +51,7 @@
           autoSetupRemote = true;
         };
         safe = {
-          directory = "$HOME/.local/share/nvim/lazy/*";
+          directory = "$HOME/.local/share/nvim/*";
         };
         user = {
           email = "LushSleutsky@gmail.com";
