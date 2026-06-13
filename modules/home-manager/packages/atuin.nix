@@ -6,17 +6,13 @@
     enableBashIntegration = true;
     enableZshIntegration = true;
     forceOverwriteSettings = true;
-
-    flags = [ "--disable-up-arrow" ];
-
+    flags = ["--disable-up-arrow"];
     settings.theme.name = "tokyo-night";
-
     themes.tokyo-night = {
       theme = {
         name = "tokyo-night";
         parent = "default";
       };
-
       colors = {
         AlertInfo = "#73daca";
         AlertWarn = "#e0af68";
