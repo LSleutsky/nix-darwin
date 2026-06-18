@@ -29,6 +29,7 @@
       asciinema
       asciiquarium
       awscli2
+      caffeine
       cloc
       cmatrix
       codecrafters-cli
