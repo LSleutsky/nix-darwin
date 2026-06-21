@@ -99,6 +99,7 @@
       n = "nvim";
       sn = "sudo -Es nvim";
       tree = "tree -a -C -I '.git' -I 'node_modules'";
+      zed = "zeditor";
     };
     initContent = lib.mkMerge [
       (lib.mkBefore ''
