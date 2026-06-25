@@ -45,6 +45,7 @@
       "steam"
       "tailscale-app"
       "visual-studio-code"
+      "zed"
     ];
   };
 }
