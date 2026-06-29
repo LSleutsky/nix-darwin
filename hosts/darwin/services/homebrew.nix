@@ -44,6 +44,7 @@
       "spotify"
       "steam"
       "tailscale-app"
+      "tor-browser"
       "visual-studio-code"
       "zed"
     ];

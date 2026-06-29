@@ -70,7 +70,6 @@
       supabase-cli
       tealdeer
       tmux
-      tor
       tree
       weather
       yamllint
