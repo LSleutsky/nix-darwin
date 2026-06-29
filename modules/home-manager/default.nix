@@ -70,7 +70,7 @@
       supabase-cli
       tealdeer
       tmux
-      tor-browser
+      tor
       tree
       weather
       yamllint
