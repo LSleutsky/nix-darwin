@@ -66,6 +66,7 @@
       gcom = "git checkout $(git_main_branch)";
       gd = "git diff";
       gdf = "git diff ':!flake.lock'";
+      gdl = "git diff --shortstat main..HEAD";
       gdn = "git diff --name-only";
       gfp = "git fetch --all --prune";
       ggf = "git push --force origin $(git symbolic-ref --short HEAD)";
