@@ -15,7 +15,6 @@
     ./packages/eza.nix
     ./packages/fzf.nix
     ./packages/git.nix
-    ./packages/nushell.nix
     ./packages/ripgrep.nix
     ./packages/starship.nix
     ./packages/zoxide.nix

@@ -5,5 +5,6 @@
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
+    historyWidget.command = "";
   };
 }
