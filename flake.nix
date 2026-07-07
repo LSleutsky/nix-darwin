@@ -3,7 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    gitfetch.url = "github:Matars/gitfetch";
+    gitfetch = {
+      url = "github:Matars/gitfetch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     rmatrix = {
       url = "github:Fierthraix/rmatrix";
