@@ -73,10 +73,10 @@
               auto-optimise-store = true;
             };
           })
-          
+
           home-manager.darwinModules.home-manager
           nix-homebrew.darwinModules.nix-homebrew
-          
+
           ({ config, ... }: {
             system.primaryUser = user;
           })
@@ -119,6 +119,13 @@
                   propagatedBuildInputs = (old.propagatedBuildInputs or []) ++ [
                     prev.python3Packages.webcolors
                   ];
+                });
+
+                nixos-render-docs = prev.nixos-render-docs.overrideAttrs (old: {
+                  postPatch = (old.postPatch or "") + ''
+                    substituteInPlace nixos_render_docs/manual.py \
+                      --replace-fail "action=_DeprecatedDepthFlag, default=None)" "type=int, default=None)"
+                  '';
                 });
               })
             ];
