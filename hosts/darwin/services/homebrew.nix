@@ -27,6 +27,7 @@
     ];
     casks = [
       "boom-3d"
+      "caffeine"
       "calibre"
       "discord"
       "docker-desktop"

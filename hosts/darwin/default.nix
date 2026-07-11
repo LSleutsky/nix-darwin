@@ -31,7 +31,9 @@ let
     rebuild_status=0
     sudo -H env HOMEBREW_NO_INSTALL_FROM_API=1 HOME=/var/root darwin-rebuild switch --flake "$ROOT_DIR" || rebuild_status=$?
     if [ "$rebuild_status" -ne 0 ]; then
-      echo "warning: darwin-rebuild exited ''${rebuild_status}; staging, committing, and pushing anyway." >&2
+      echo "error: darwin-rebuild exited ''${rebuild_status}; reverting flake.lock, nothing committed or pushed." >&2
+      sudo -u lush git checkout -- flake.lock
+      exit "$rebuild_status"
     fi
 
     sudo -u lush git add --all
