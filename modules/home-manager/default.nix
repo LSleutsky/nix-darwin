@@ -61,6 +61,7 @@
       pngquant
       postgresql
       raycast
+      ripgrep-all
       rustup
       scc
       scrcpy
@@ -72,10 +73,6 @@
       weather
       yamllint
       zk
-
-      (ripgrep-all.overrideAttrs (old: {
-        doInstallCheck = false;
-      }))
 
       (rustPlatform.buildRustPackage {
         pname = "rmatrix";

@@ -29,7 +29,7 @@ let
     fi
 
     rebuild_status=0
-    sudo -H env HOMEBREW_NO_INSTALL_FROM_API=1 HOME=/var/root darwin-rebuild switch --flake "$ROOT_DIR" || rebuild_status=$?
+    sudo -H env HOME=/var/root darwin-rebuild switch --flake "$ROOT_DIR" || rebuild_status=$?
     if [ "$rebuild_status" -ne 0 ]; then
       echo "error: darwin-rebuild exited ''${rebuild_status}; reverting flake.lock, nothing committed or pushed." >&2
       sudo -u lush git checkout -- flake.lock
@@ -63,6 +63,14 @@ in
         Minute = 0;
       };
       options = "--delete-old";
+    };
+    optimise = {
+      automatic = true;
+      interval = {
+        Weekday = 0;
+        Hour = 4;
+        Minute = 0;
+      };
     };
     settings = {
       trusted-users = ["@admin"];

@@ -23,21 +23,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    homebrew-bundle = {
-      url = "github:homebrew/homebrew-bundle";
-      flake = false;
-    };
-
-    homebrew-core = {
-      url = "github:homebrew/homebrew-core";
-      flake = false;
-    };
-
-    homebrew-cask = {
-      url = "github:homebrew/homebrew-cask";
-      flake = false;
-    };
-
     nix-homebrew = {
       url = "github:zhaofengli-wip/nix-homebrew";
       inputs.brew-src = {
@@ -47,7 +32,7 @@
     };
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, ... } @inputs:
+  outputs = { self, darwin, nixpkgs, home-manager, nix-homebrew, ... } @inputs:
 
   let
     user = "lush";
@@ -70,7 +55,6 @@
             nix.package = pkgs.lix;
             nix.settings = {
               experimental-features = [ "nix-command" "flakes" ];
-              auto-optimise-store = true;
             };
           })
 
@@ -98,14 +82,6 @@
           {
             nixpkgs.overlays = [
               (final: prev: {
-                fish = prev.fish.overrideAttrs (_: {
-                  doCheck = false;
-                });
-
-                nushell = prev.nushell.overrideAttrs (_: {
-                  doCheck = false;
-                });
-
                 buildEnv = args:
                   let
                     args' =
@@ -119,13 +95,6 @@
                   propagatedBuildInputs = (old.propagatedBuildInputs or []) ++ [
                     prev.python3Packages.webcolors
                   ];
-                });
-
-                nixos-render-docs = prev.nixos-render-docs.overrideAttrs (old: {
-                  postPatch = (old.postPatch or "") + ''
-                    substituteInPlace nixos_render_docs/manual.py \
-                      --replace-fail "action=_DeprecatedDepthFlag, default=None)" "type=int, default=None)"
-                  '';
                 });
               })
             ];
