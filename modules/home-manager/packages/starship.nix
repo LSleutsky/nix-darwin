@@ -3,6 +3,7 @@
 {
   programs.starship = {
     enable = true;
+    package = pkgs.writeShellScriptBin "starship" ''exec /opt/homebrew/bin/starship "$@"'';
     enableBashIntegration = true;
     enableNushellIntegration = true;
     enableZshIntegration = true;

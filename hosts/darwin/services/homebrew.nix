@@ -21,6 +21,7 @@
       "luarocks"
       "mas"
       "maven"
+      "starship"
       "tree-sitter-cli"
       "tty-clock"
       "webp"
