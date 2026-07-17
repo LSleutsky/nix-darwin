@@ -12,7 +12,6 @@
     ./packages/atuin.nix
     ./packages/bat.nix
     ./packages/btop.nix
-    ./packages/cursor.nix
     ./packages/eza.nix
     ./packages/fzf.nix
     ./packages/git.nix
