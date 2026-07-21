@@ -13,6 +13,9 @@
 			upgrade = true;
 			extraFlags = [ "--force" ];
 		};
+		taps = [
+			{ name = "b451c/quickmd"; trusted = true; }
+		];
     brews = [
       "arp-scan"
       "cbonsai"
@@ -44,6 +47,7 @@
       "openmtp"
       "postman"
       "postman-cli"
+      "quickmd"
       "spotify"
       "steam"
       "tailscale-app"
