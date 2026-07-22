@@ -28,6 +28,7 @@
       asciinema
       asciiquarium
       awscli2
+      bruno
       cloc
       cmatrix
       codecrafters-cli
