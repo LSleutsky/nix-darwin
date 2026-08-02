@@ -47,6 +47,7 @@
       "postman"
       "postman-cli"
       "quickmd"
+      "spotify"
       "steam"
       "tailscale-app"
       "tor-browser"
