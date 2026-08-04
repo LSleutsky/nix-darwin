@@ -85,6 +85,7 @@
       history = "history -i";
       ip = "ipconfig getifaddr en0";
       ipv6 = "ifconfig | grep 'inet6' | grep -E -v '(fe80|fd69|::1)'";
+      loc = "git ls-files | xargs wc -l";
       man = "batman";
       mkdir = "mkdir -p";
       nb = "nvim $HOME/.config/nix-darwin/hosts/darwin/services/homebrew.nix";
