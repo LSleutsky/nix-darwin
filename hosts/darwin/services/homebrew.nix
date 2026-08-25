@@ -25,6 +25,7 @@
       "mas"
       "maven"
       "starship"
+      "tmux"
       "tree-sitter-cli"
       "tty-clock"
       "webp"

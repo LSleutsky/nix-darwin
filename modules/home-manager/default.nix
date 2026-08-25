@@ -69,7 +69,6 @@
       serie
       supabase-cli
       tealdeer
-      tmux
       tree
       weather
       yamllint
