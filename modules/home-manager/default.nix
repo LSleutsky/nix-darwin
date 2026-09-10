@@ -67,6 +67,7 @@
       scc
       scrcpy
       serie
+      sqlitebrowser
       supabase-cli
       tealdeer
       tree
