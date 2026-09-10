@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:nix-community.github.io)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:docs.atuin.sh)",
+      "WebSearch",
+      "WebFetch(domain:gist.github.com)",
+      "Bash(git rev-list *)",
+      "Bash(git config *)",
+      "Bash(git commit *)",
+      "Read(//Users/lush/.config/atuin/**)",
+      "Bash(nix eval *)",
+      "Read(//nix/store/**)",
+      "Bash(nix flake *)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 *)",
+      "Bash(grep -n 'toc-depth\\\\|sidebar-depth\\\\|enable\\\\|mkEnableOption\\\\|mkOption\\\\|manualHTML\\\\|manual.html\\\\|cfg\\\\.' __TRACKED_VAR__/modules/documentation/default.nix)",
+      "Bash(nix build *)",
+      "Bash(gh api *)",
+      "Bash(echo \"archived? -> $\\(gh api repos/LnL7/nix-darwin --jq '.archived' 2>&1\\)\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(echo \"=== exit code: $? ===\")",
+      "Bash(brew info *)",
+      "Bash(nix config *)",
+      "Bash(nix --version)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.brew.sh)",
+      "Bash(brew --version)",
+      "Bash(cd /private/tmp/claude-501/-Users-lush--config-nix-darwin/ad63a6a4-4c3a-41bf-9a30-f4450c7f7f6b/scratchpad)",
+      "Bash(printf 'tap \"b451c/quickmd\", trusted: true\\\\ncask \"quickmd\"\\\\n')",
+      "Bash(printf 'tap \"b451c/quickmd\"\\\\ncask \"b451c/quickmd/quickmd\", trusted: true\\\\n')",
+      "Bash(export HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_ENV_HINTS=1)",
+      "Bash(echo \"===== TEST A: tap trusted =====\")",
+      "Bash(brew bundle *)",
+      "Bash(echo \"===== TEST A verbose \\(tap trusted\\) =====\")",
+      "Bash(brew upgrade *)",
+      "Bash(brew list *)",
+      "Read(//Applications/Obsidian.app/Contents/MacOS/**)"
+    ]
+  }
+}

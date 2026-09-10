@@ -28,7 +28,7 @@
       enable = true;
       package = pkgs.git;
       ignores = [
-        ".claude/"
+        # ".claude/"
         ".direnv/"
         ".DS_Store"
         "*.log"
