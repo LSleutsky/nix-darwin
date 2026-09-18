@@ -41,7 +41,6 @@
       "font-monaspace"
       "ghostty"
       "istat-menus"
-      "logi-options+"
       "notunes"
       "obsidian"
       "openmtp"
