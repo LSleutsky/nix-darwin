@@ -20,6 +20,7 @@
       "arp-scan"
       "cbonsai"
       "docker-compose"
+      "fortune"
       "lua"
       "luarocks"
       "mas"
