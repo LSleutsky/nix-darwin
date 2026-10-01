@@ -112,5 +112,8 @@
   home.file."Library/Application Support/nushell/env.nu".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nushell/env.nu";
 
+  # The manpage re-evaluates every home-manager option on each rebuild.
+  manual.manpages.enable = false;
+
   xdg.enable = true;
 }

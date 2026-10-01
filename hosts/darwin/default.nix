@@ -53,6 +53,8 @@ in
   security.pam.services.sudo_local.touchIdAuth = true;
   time.timeZone = "America/New_York";
   system.tools.darwin-uninstaller.enable = false;
+  # The manual re-evaluates every nix-darwin option on each rebuild.
+  documentation.enable = false;
 
   nix = {
     gc = {
