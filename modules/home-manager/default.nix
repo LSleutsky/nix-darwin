@@ -70,6 +70,7 @@
       supabase-cli
       tealdeer
       tree
+      uv
       weather
       yamllint
       zk
