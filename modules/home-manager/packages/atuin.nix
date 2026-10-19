@@ -3,6 +3,7 @@
 {
   programs.atuin = {
     enable = true;
+    package = pkgs.writeShellScriptBin "atuin" ''exec /opt/homebrew/bin/atuin "$@"'';
     enableBashIntegration = true;
     enableZshIntegration = true;
     forceOverwriteSettings = true;
