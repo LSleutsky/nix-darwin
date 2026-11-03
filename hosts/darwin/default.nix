@@ -126,6 +126,11 @@ in
     defaults = {
       CustomUserPreferences = {
         NSGlobalDomain.WebKitDeveloperExtras = true;
+        NSGlobalDomain.NSUserKeyEquivalents = {
+          Fill = "@~^f";
+          Left = "@~^←";
+          Right = "@~^→";
+        };
         "com.apple.desktopservices" = {
           DSDontWriteNetworkStores = true;
           DSDontWriteUSBStores = true;
