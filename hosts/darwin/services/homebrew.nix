@@ -36,6 +36,7 @@
       "boom-3d"
       "caffeine"
       "calibre"
+      "claude"
       "discord"
       "docker-desktop"
       "dropbox@beta"
