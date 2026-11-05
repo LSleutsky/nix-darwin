@@ -29,6 +29,7 @@
       asciiquarium
       awscli2
       bruno
+      cava
       cloc
       cmatrix
       codecrafters-cli
