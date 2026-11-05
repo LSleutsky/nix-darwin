@@ -19,6 +19,7 @@
     brews = [
       "arp-scan"
       "atuin"
+      "cava"
       "cbonsai"
       "docker-compose"
       "fortune"
