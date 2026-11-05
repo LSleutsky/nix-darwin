@@ -33,6 +33,7 @@
       "webp"
     ];
     casks = [
+      "blackhole-2ch"
       "boom-3d"
       "caffeine"
       "calibre"

@@ -1,16 +1,11 @@
 { config, lib, pkgs, ... }:
 
-{
-  programs.cava = {
-    enable = true;
-    settings = {
-      general = {
-        framerate = 60;
-      };
-      input = {
-        method = "coreaudio";
-        source = "tap";
-      };
+programs.cava = {
+  enable = true;
+  settings = {
+    input = {
+      method = "portaudio";
+      source = "BlackHole 2ch";
     };
   };
-}
+};
