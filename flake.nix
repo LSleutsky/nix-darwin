@@ -95,6 +95,11 @@
                     prev.python3Packages.webcolors
                   ];
                 });
+
+                fnm = prev.fnm.overrideAttrs (old: {
+                  nativeBuildInputs = old.nativeBuildInputs ++ [ prev.pkg-config ];
+                  buildInputs = (old.buildInputs or []) ++ [ prev.zstd ];
+                });
               })
             ];
           }
