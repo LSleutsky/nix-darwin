@@ -15,11 +15,13 @@
 		};
 		taps = [
 			{ name = "b451c/quickmd"; trusted = true; }
+			{ name = "dart-lang/dart"; trusted = true; }
 		];
     brews = [
       "arp-scan"
       "atuin"
       "cbonsai"
+      "dart"
       "docker-compose"
       "fortune"
       "lua"
